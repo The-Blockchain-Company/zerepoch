@@ -1,0 +1,4 @@
+=== `simeon-symbolic`
+
+This package contains a web-service for doing static analysis of Simeon
+programs using symbolic execution.

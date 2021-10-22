@@ -1,0 +1,3 @@
+=== `zerepoch-playground-client`
+
+The Zerepoch Playground client code, written in Purescript.

@@ -1,0 +1,202 @@
+cabal-version: 2.2
+name: zerepoch-contract
+version: 0.1.0.0
+license: Apache-2.0
+license-files:
+  LICENSE
+  NOTICE
+maintainer: jann.mueller@bcccoin.io
+author: Jann Müller
+homepage: https://github.com/bcccoin/zerepoch#readme
+bug-reports: https://github.com/bcccoin/zerepoch/issues
+description:
+    Please see the README on GitHub at <https://github.com/The-Blockchain-Company/zerepoch#readme>
+build-type: Simple
+
+source-repository head
+    type: git
+    location: https://github.com/bcccoin/zerepoch
+
+common lang
+    default-language: Haskell2010
+    default-extensions: ExplicitForAll ScopedTypeVariables
+                        DeriveGeneric StandaloneDeriving DeriveLift
+                        GeneralizedNewtypeDeriving DeriveFunctor DeriveFoldable
+                        DeriveTraversable
+    ghc-options: -Wall -Wnoncanonical-monad-instances -Wunused-packages
+                 -Wincomplete-uni-patterns -Wincomplete-record-updates
+                 -Wredundant-constraints -Widentities
+                 -- See Zerepoch Tx readme
+                 -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas
+
+flag defer-plugin-errors
+    description:
+        Defer errors from the plugin, useful for things like Haddock that can't handle it.
+    default: False
+    manual: True
+
+library
+    import: lang
+    exposed-modules:
+        Data.Row.Extras
+        Data.Text.Extras
+        Data.UUID.Extras
+        Zerepoch.Contract
+        Zerepoch.Contract.Effects
+        Zerepoch.Contract.Request
+        Zerepoch.Contract.Checkpoint
+        Zerepoch.Contract.Constraints
+        Zerepoch.Contract.State
+        Zerepoch.Contract.Schema
+        Zerepoch.Contract.Trace
+        Zerepoch.Contract.Trace.RequestHandler
+        Zerepoch.Contract.Resumable
+        Zerepoch.Contract.StateMachine
+        Zerepoch.Contract.StateMachine.OnChain
+        Zerepoch.Contract.StateMachine.MintingPolarity
+        Zerepoch.Contract.StateMachine.ThreadToken
+        Zerepoch.Contract.Tx
+        Zerepoch.Contract.Types
+        Zerepoch.Contract.Util
+        Zerepoch.Contract.Wallet
+        Zerepoch.Contract.Typed.Tx
+        Wallet.Emulator
+        Wallet.Emulator.Types
+        Wallet.Emulator.Chain
+        Wallet.Emulator.Error
+        Wallet.Emulator.Folds
+        Wallet.Emulator.LogMessages
+        Wallet.Emulator.NodeClient
+        Wallet.Emulator.MultiAgent
+        Wallet.Emulator.Stream
+        Wallet.Emulator.Wallet
+        Wallet.Rollup
+        Wallet.Rollup.Types
+        Wallet.Rollup.Render
+        Wallet
+        Wallet.API
+        Wallet.Effects
+        Wallet.Graph
+        Wallet.Types
+        Zerepoch.Trace
+        Zerepoch.Trace.Effects.ContractInstanceId
+        Zerepoch.Trace.Effects.RunContract
+        Zerepoch.Trace.Effects.RunContractPlayground
+        Zerepoch.Trace.Effects.EmulatedWalletAPI
+        Zerepoch.Trace.Effects.EmulatorControl
+        Zerepoch.Trace.Effects.Waiting
+        Zerepoch.Trace.Emulator
+        Zerepoch.Trace.Emulator.ContractInstance
+        Zerepoch.Trace.Emulator.Extract
+        Zerepoch.Trace.Emulator.System
+        Zerepoch.Trace.Emulator.Types
+        Zerepoch.Trace.Playground
+        Zerepoch.Trace.Scheduler
+        Zerepoch.Trace.Tag
+    hs-source-dirs: src
+    build-depends:
+        zerepoch-chain-index -any,
+        zerepoch-core -any,
+        zerepoch-ledger -any,
+        zerepoch-ledger-api -any,
+        zerepoch-tx -any,
+        freer-extras -any,
+    build-depends:
+        bcc-api -any,
+        bcc-crypto -any,
+        bcc-ledger-core -any,
+    build-depends:
+        aeson >= 1.5.2,
+        aeson-pretty -any,
+        base >=4.7 && <5,
+        bytestring -any,
+        containers -any,
+        cryptonite >=0.25,
+        data-default -any,
+        deepseq -any,
+        directory -any,
+        filepath -any,
+        fingertree -any,
+        flat -any,
+        foldl -any,
+        freer-simple -any,
+        hashable -any,
+        hedgehog -any,
+        lens -any,
+        memory -any,
+        mmorph -any,
+        monad-control -any,
+        mtl -any,
+        newtype-generics -any,
+        prettyprinter >=1.1.0.1,
+        profunctors -any,
+        quickcheck-dynamic -any,
+        random -any,
+        row-types >= 1.0.1.0,
+        semigroupoids -any,
+        semigroups -any,
+        servant -any,
+        serialise -any,
+        streaming -any,
+        template-haskell -any,
+        text -any,
+        transformers -any,
+        unordered-containers -any,
+        uuid -any,
+        IntervalMap -any,
+        QuickCheck -any,
+
+    if !(impl(ghcjs) || os(ghcjs))
+        build-depends: zerepoch-tx-plugin -any
+
+    if flag(defer-plugin-errors)
+        ghc-options: -fplugin-opt ZerepochTx.Plugin:defer-errors
+
+    if !(impl(ghcjs) || os(ghcjs) || os(windows))
+        exposed-modules:
+            Zerepoch.Contract.Test
+            Zerepoch.Contract.Test.ContractModel
+        build-depends:
+            tasty -any,
+            tasty-hunit -any,
+            tasty-golden -any,
+
+test-suite zerepoch-contract-test
+    -- TODO: put this back, turns out there were lots of warnings in the `zerepoch-emulator` tests...
+    --import: lang
+    default-language: Haskell2010
+    type: exitcode-stdio-1.0
+    main-is: Spec.hs
+    hs-source-dirs: test
+    other-modules:
+        Spec.Contract
+        Spec.Emulator
+        Spec.Rows
+        Spec.State
+        Spec.ThreadToken
+    build-depends:
+        base >=4.9 && <5,
+        bytestring -any,
+        containers -any,
+        data-default -any,
+        freer-extras -any,
+        hedgehog -any,
+        tasty -any,
+        tasty-golden -any,
+        tasty-hunit -any,
+        tasty-hedgehog -any,
+        text -any,
+        mtl -any,
+        aeson -any,
+        lens -any,
+        transformers -any,
+        extensible-effects -any,
+        zerepoch-contract -any,
+        zerepoch-ledger -any,
+        zerepoch-tx -any,
+        freer-simple -any,
+        aeson -any,
+        semigroupoids -any
+
+    if !(impl(ghcjs) || os(ghcjs))
+        build-depends: zerepoch-tx-plugin -any

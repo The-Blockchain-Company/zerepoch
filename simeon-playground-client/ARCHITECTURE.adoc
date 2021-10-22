@@ -1,0 +1,3 @@
+=== `simeon-playground-client`
+
+The Simeon Playground client code, written in Purescript.

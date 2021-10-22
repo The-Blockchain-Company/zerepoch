@@ -1,0 +1,158 @@
+cabal-version: 2.2
+name: zerepoch-chain-index
+version: 0.1.0.0
+license: Apache-2.0
+license-files:
+  LICENSE
+  NOTICE
+maintainer: sjoerd.visscher@bcccoin.io
+author: Sjoerd Visscher
+homepage: https://github.com/bcccoin/zerepoch#readme
+bug-reports: https://github.com/bcccoin/zerepoch/issues
+description:
+    Please see the README on GitHub at <https://github.com/The-Blockchain-Company/zerepoch#readme>
+build-type: Simple
+
+source-repository head
+    type: git
+    location: https://github.com/bcccoin/zerepoch
+
+common lang
+    default-language: Haskell2010
+    default-extensions: ExplicitForAll ScopedTypeVariables
+                        DeriveGeneric StandaloneDeriving DeriveLift
+                        GeneralizedNewtypeDeriving DeriveFunctor DeriveFoldable
+                        DeriveTraversable
+    ghc-options: -Wall -Wnoncanonical-monad-instances -Wunused-packages
+                 -Wincomplete-uni-patterns -Wincomplete-record-updates
+                 -Wredundant-constraints -Widentities
+
+library
+    import: lang
+    exposed-modules:
+        Zerepoch.ChainIndex
+        Zerepoch.ChainIndex.Api
+        Zerepoch.ChainIndex.Effects
+        Zerepoch.ChainIndex.Emulator.DiskState
+        Zerepoch.ChainIndex.Emulator.Handlers
+        Zerepoch.ChainIndex.Client
+        Zerepoch.ChainIndex.Server
+        Zerepoch.ChainIndex.Tx
+        Zerepoch.ChainIndex.TxIdState
+        Zerepoch.ChainIndex.Types
+        Zerepoch.ChainIndex.UtxoState
+        Zerepoch.Monitoring.Util
+        Bcc.Protocol.Socket.Type
+        Bcc.Protocol.Socket.Client
+        Zerepoch.ChainIndex.Compatibility
+        Zerepoch.Contract.BccAPI
+        Zerepoch.Contract.BccAPITemp
+    hs-source-dirs: src
+    build-depends:
+        zerepoch-core -any,
+        zerepoch-ledger -any,
+        zerepoch-ledger-api -any,
+        zerepoch-tx -any,
+        freer-extras -any,
+    -- Temporary for Zerepoch.Contract.BccAPITemp
+    build-depends:
+        bcc-ledger-core -any,
+        bcc-ledger-aurum -any,
+        bcc-ledger-sophie-ma -any,
+        shardagnostic-consensus-sophie -any,
+        sophie-spec-ledger -any,
+        strict-containers -any,
+    build-depends:
+        aeson -any,
+        base >=4.7 && <5,
+        bcc-api -any,
+        bcc-ledger-cole -any,
+        containers -any,
+        cryptonite -any,
+        data-default -any,
+        exceptions -any,
+        fingertree -any,
+        freer-simple -any,
+        io-classes -any,
+        bcccoin-monitoring -any,
+        lens -any,
+        memory -any,
+        nothunks -any,
+        shardagnostic-network -any,
+        shardagnostic-network-framework -any,
+        shardagnostic-consensus -any,
+        shardagnostic-consensus-cole -any,
+        shardagnostic-consensus-bcc -any,
+        shardagnostic-consensus-sophie -any,
+        prettyprinter >=1.1.0.1,
+        semigroups -any,
+        serialise -any,
+        time-units -any,
+        typed-protocols-examples -any,
+        unordered-containers -any,
+        bytestring -any,
+        data-default -any,
+        text -any,
+        servant -any,
+        servant-server -any,
+        stm -any,
+        mtl -any,
+        warp -any,
+        servant-client -any,
+        servant-client-core -any,
+        http-types -any
+
+test-suite zerepoch-chain-index-test
+    import: lang
+    type: exitcode-stdio-1.0
+    main-is: Spec.hs
+    hs-source-dirs: test
+    other-modules:
+        Generators
+    build-depends:
+        zerepoch-ledger -any,
+        zerepoch-ledger-api -any,
+        zerepoch-tx -any,
+        zerepoch-chain-index -any
+    build-depends:
+        base >=4.9 && <5,
+        hedgehog -any,
+        tasty -any,
+        tasty-hedgehog -any,
+        containers -any,
+        serialise -any,
+        bytestring -any,
+        fingertree -any,
+        freer-simple -any,
+        lens -any
+
+executable zerepoch-chain-index
+  main-is: Main.hs
+  hs-source-dirs: app
+  other-modules:
+    CommandLine
+    Config
+    Logging
+  default-language: Haskell2010
+  ghc-options:
+        -threaded -rtsopts -with-rtsopts=-N -Wall -Wcompat
+        -Wincomplete-uni-patterns -Wincomplete-record-updates
+        -Wno-missing-import-lists -Wredundant-constraints -O0
+  build-depends:
+    base >=4.9 && <5,
+    aeson -any,
+    bcc-api -any,
+    bcc-slotting -any,
+    containers -any,
+    freer-extras -any,
+    freer-simple -any,
+    lens -any,
+    optparse-applicative -any,
+    shardagnostic-network -any,
+    zerepoch-chain-index -any,
+    zerepoch-ledger -any,
+    bcccoin-monitoring -any,
+    yaml -any,
+    prettyprinter >=1.1.0.1,
+    zerepoch-chain-index -any,
+    stm -any

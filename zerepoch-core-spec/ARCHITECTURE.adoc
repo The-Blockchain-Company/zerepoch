@@ -1,0 +1,3 @@
+=== `zerepoch-core-spec`
+
+This folder contains the Zerepoch Core specification.

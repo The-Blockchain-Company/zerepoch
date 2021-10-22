@@ -1,0 +1,168 @@
+cabal-version: 2.2
+name: zerepoch-benchmark
+version: 0.1.0.0
+license: Apache-2.0
+license-files:
+  LICENSE
+  NOTICE
+maintainer: radu.ometita@bcccoin.io
+author: Radu Ometita
+homepage: https://github.com/bcccoin/zerepoch#readme
+bug-reports: https://github.com/bcccoin/zerepoch/issues
+description:
+    Please see the README on GitHub at <https://github.com/The-Blockchain-Company/zerepoch#readme>
+build-type: Simple
+
+data-files:
+        templates/*.tpl
+        validation/data/*.flat
+
+source-repository head
+    type: git
+    location: https://github.com/bcccoin/zerepoch
+
+common lang
+  default-language: Haskell2010
+  ghc-options:
+    -fno-strictness
+    -fno-specialise
+    -fno-spec-constr
+    -fno-ignore-interface-pragmas
+    -fno-omit-interface-pragmas
+    -fno-worker-wrapper
+  ghc-options:
+     -Wall -Wnoncanonical-monad-instances -Wunused-packages
+     -Wincomplete-uni-patterns -Wincomplete-record-updates
+     -Wredundant-constraints -Widentities
+     -Wnoncanonical-monoid-instances
+
+library
+  import: lang
+  exposed-modules:
+      Zerepoch.Benchmark.Clausify
+      Zerepoch.Benchmark.Queens
+      Zerepoch.Benchmark.Knights
+      Zerepoch.Benchmark.Knights.ChessSetList
+      Zerepoch.Benchmark.Knights.KnightHeuristic
+      Zerepoch.Benchmark.Knights.Queue
+      Zerepoch.Benchmark.Knights.Sort
+      Zerepoch.Benchmark.Knights.Utils
+      Zerepoch.Benchmark.LastPiece
+      Zerepoch.Benchmark.Prime
+  hs-source-dirs:
+      nofib/src
+  build-depends:
+      base >=4.7 && <5
+    , zerepoch-tx -any
+    , zerepoch-tx-plugin -any
+    , zerepoch-core -any
+    , deepseq -any
+  default-extensions:
+    DataKinds
+    NamedFieldPuns
+    OverloadedStrings
+    TemplateHaskell
+    TypeApplications
+    MultiParamTypeClasses
+    ScopedTypeVariables
+
+executable nofib-exe
+  import: lang
+  main-is: Main.hs
+  hs-source-dirs:
+      nofib/exe
+  build-depends:
+      base >=4.7 && <5
+    , zerepoch-benchmark
+    , zerepoch-tx -any
+    , zerepoch-tx-plugin -any
+    , zerepoch-core -any
+    , ansi-wl-pprint -any
+    , bytestring -any
+    , containers -any
+    , flat -any
+    , optparse-applicative -any
+    , serialise -any
+    , transformers -any
+
+benchmark nofib
+  import: lang
+  type: exitcode-stdio-1.0
+  main-is: BenchPlc.hs
+  hs-source-dirs:
+    nofib/bench
+  other-modules:
+    Common
+    Paths_zerepoch_benchmark
+  build-depends:
+      base >=4.7 && <5
+    , zerepoch-benchmark
+    , zerepoch-tx -any
+    , zerepoch-tx-plugin -any
+    , zerepoch-core -any
+    , containers -any
+    , criterion >= 1.5.9.0
+    , filepath -any
+    , mtl -any
+
+benchmark nofib-hs
+  import: lang
+  type: exitcode-stdio-1.0
+  main-is: BenchHaskell.hs
+  hs-source-dirs:
+    nofib/bench
+  other-modules:
+    Common
+    Paths_zerepoch_benchmark
+  build-depends:
+      base >=4.7 && <5
+    , zerepoch-benchmark
+    , zerepoch-tx -any
+    , zerepoch-tx-plugin -any
+    , zerepoch-core -any
+    , containers -any
+    , criterion -any
+    , filepath -any
+
+
+benchmark validation
+  import: lang
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  hs-source-dirs:
+      validation
+  other-modules:
+      NaturalSort
+      Paths_zerepoch_benchmark
+  build-depends:
+      base >=4.7 && <5
+    , zerepoch-core -any
+    , bytestring -any
+    , containers -any
+    , criterion >= 1.5.9.0
+    , deepseq -any
+    , directory -any
+    , filepath -any
+    , flat -any
+    , optparse-applicative -any
+    , text -any
+    , transformers -any
+
+test-suite zerepoch-benchmark-nofib-tests
+    import: lang
+    type: exitcode-stdio-1.0
+    main-is: Spec.hs
+    hs-source-dirs: nofib/test
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    default-language: Haskell2010
+    build-depends:
+        base >=4.7 && <5
+      , zerepoch-benchmark -any
+      , zerepoch-tx -any
+      , zerepoch-tx-plugin -any
+      , zerepoch-core -any
+      , containers -any
+      , tasty -any
+      , tasty-hunit -any
+      , tasty-quickcheck -any
+      , mtl -any

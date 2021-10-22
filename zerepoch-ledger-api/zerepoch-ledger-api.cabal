@@ -1,0 +1,96 @@
+cabal-version: 2.2
+name: zerepoch-ledger-api
+version: 0.1.0.0
+license: Apache-2.0
+license-files:
+  LICENSE
+  NOTICE
+maintainer: michael.peyton-jones@bcccoin.io
+author: Michael Peyton Jones, Jann Mueller
+synopsis: Interface to the Zerepoch ledger for the Bcc ledger.
+description:
+    Interface to the Zerepoch scripting support for the Bcc ledger.
+category: Language
+build-type: Simple
+
+source-repository head
+    type: git
+    location: https://github.com/The-Blockchain-Company/zerepoch
+
+common lang
+    default-language: Haskell2010
+    default-extensions: ExplicitForAll ScopedTypeVariables
+                        DeriveGeneric StandaloneDeriving DeriveLift
+                        GeneralizedNewtypeDeriving DeriveFunctor DeriveFoldable
+                        DeriveTraversable MultiParamTypeClasses FlexibleContexts
+    ghc-options: -Wall -Wnoncanonical-monad-instances -Wunused-packages
+                 -Wincomplete-uni-patterns -Wincomplete-record-updates
+                 -Wredundant-constraints -Widentities -Wunused-packages
+                 -- See Zerepoch Tx readme
+                 -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas
+
+library
+    import: lang
+    hs-source-dirs: src
+    default-language: Haskell2010
+    exposed-modules:
+        Data.Aeson.Extras
+        Data.Either.Extras
+        Data.Text.Prettyprint.Doc.Extras
+        Zerepoch.V1.Ledger.Address
+        Zerepoch.V1.Ledger.Bcc
+        Zerepoch.V1.Ledger.Api
+        Zerepoch.V1.Ledger.Bytes
+        Zerepoch.V1.Ledger.Contexts
+        Zerepoch.V1.Ledger.Credential
+        Zerepoch.V1.Ledger.Crypto
+        Zerepoch.V1.Ledger.DCert
+        Zerepoch.V1.Ledger.Examples
+        Zerepoch.V1.Ledger.Interval
+        Zerepoch.V1.Ledger.Orphans
+        Zerepoch.V1.Ledger.Scripts
+        Zerepoch.V1.Ledger.Slot
+        Zerepoch.V1.Ledger.Tx
+        Zerepoch.V1.Ledger.TxId
+        Zerepoch.V1.Ledger.Time
+        Zerepoch.V1.Ledger.Value
+    build-depends:
+        base >=4.9 && <5,
+        aeson -any,
+        bytestring -any,
+        cborg -any,
+        containers -any,
+        flat -any,
+        hashable -any,
+        zerepoch-core -any,
+        memory -any,
+        mtl -any,
+        zerepoch-tx -any,
+        serialise -any,
+        template-haskell -any,
+        text -any,
+        prettyprinter -any,
+        transformers -any,
+        base16-bytestring >= 1,
+        deepseq -any,
+        newtype-generics -any,
+        tagged -any,
+        lens -any,
+        scientific -any
+
+test-suite zerepoch-ledger-api-test
+    import: lang
+    type: exitcode-stdio-1.0
+    main-is: Spec.hs
+    hs-source-dirs: test
+    other-modules:
+        Spec.Interval
+        Spec.Time
+    build-depends:
+        base >=4.9 && <5,
+        aeson -any,
+        zerepoch-ledger-api -any,
+        hedgehog -any,
+        tasty -any,
+        tasty-hedgehog -any,
+        tasty-hunit -any

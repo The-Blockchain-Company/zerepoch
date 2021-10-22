@@ -1,0 +1,126 @@
+cabal-version: 2.2
+name: zerepoch-tx-plugin
+version: 0.1.0.0
+license: Apache-2.0
+license-files:
+  LICENSE
+  NOTICE
+maintainer: michael.peyton-jones@bcccoin.io
+author: Michael Peyton Jones
+synopsis: The Zerepoch Tx compiler and GHC plugin
+description:
+    The Zerepoch Tx compiler and GHC plugin.
+category: Language
+build-type: Simple
+extra-doc-files: README.md
+
+source-repository head
+    type: git
+    location: https://github.com/The-Blockchain-Company/zerepoch
+
+common lang
+    default-language: Haskell2010
+    default-extensions: ExplicitForAll ScopedTypeVariables
+                        DeriveGeneric StandaloneDeriving DeriveLift
+                        GeneralizedNewtypeDeriving DeriveFunctor DeriveFoldable
+                        DeriveTraversable
+    ghc-options: -Wall -Wnoncanonical-monad-instances
+                 -Wincomplete-uni-patterns -Wincomplete-record-updates
+                 -Wredundant-constraints -Widentities
+                 -Wunused-packages
+                 -- See Zerepoch Tx readme
+                 -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas
+
+flag use-ghc-stub
+    description:
+        Use the `zerepoch-ghc-stub` package instead of `ghc`.
+    default: False
+    manual: True
+
+library
+    import: lang
+    hs-source-dirs: src
+    exposed-modules:
+        ZerepochTx.Plugin
+        ZerepochTx.Compiler.Error
+    other-modules:
+        ZerepochTx.Compiler.Binders
+        ZerepochTx.Compiler.Builtins
+        ZerepochTx.Compiler.Expr
+        ZerepochTx.Compiler.Kind
+        ZerepochTx.Compiler.Laziness
+        ZerepochTx.Compiler.Names
+        ZerepochTx.Compiler.Type
+        ZerepochTx.Compiler.Types
+        ZerepochTx.Compiler.Utils
+        ZerepochTx.PIRTypes
+        ZerepochTx.PLCTypes
+    build-depends:
+        base >=4.9 && <5,
+        bytestring -any,
+        containers -any,
+        extra -any,
+        flat -any,
+        ghc-prim -any,
+        zerepoch-core -any,
+        lens -any,
+        mtl -any,
+        prettyprinter -any,
+        template-haskell -any,
+        text -any,
+        transformers -any,
+        zerepoch-tx -any
+    if flag(use-ghc-stub)
+        build-depends: zerepoch-ghc-stub
+        ghc-options: -Wno-unused-packages -Wno-unused-imports -Wno-overlapping-patterns
+    else
+        build-depends: ghc >=8.10 && <9
+
+
+test-suite zerepoch-tx-tests
+    if flag(use-ghc-stub)
+        buildable: False
+    type: exitcode-stdio-1.0
+    hs-source-dirs: test
+    main-is: Spec.hs
+    other-modules:
+        IsData.Spec
+        Lift.Spec
+        Plugin.Spec
+        Plugin.Basic.Spec
+        Plugin.Data.Spec
+        Plugin.Errors.Spec
+        Plugin.Functions.Spec
+        Plugin.Laziness.Spec
+        Plugin.Primitives.Spec
+        Plugin.Typeclasses.Spec
+        Plugin.Typeclasses.Lib
+        Plugin.Lib
+        StdLib.Spec
+        TH.Spec
+        TH.TestTH
+        Lib
+    default-language: Haskell2010
+    build-depends:
+        base >=4.9 && <5,
+        flat -any,
+        deepseq -any,
+        integer-gmp -any,
+        zerepoch-core -any,
+        zerepoch-tx -any,
+        zerepoch-tx-plugin -any,
+        prettyprinter -any,
+        mtl -any,
+        bytestring -any,
+        serialise -any,
+        template-haskell -any,
+        tasty -any,
+        tasty-hunit -any,
+        tasty-hedgehog -any,
+        text -any,
+        hedgehog -any,
+        lens -any,
+        ghc-prim -any,
+    -- NOTE: -g makes the plugin give better errors
+    -- NOTE: we disable the simplifier as it simplifies away some tests
+    ghc-options: -g -fplugin-opt ZerepochTx.Plugin:max-simplifier-iterations=0

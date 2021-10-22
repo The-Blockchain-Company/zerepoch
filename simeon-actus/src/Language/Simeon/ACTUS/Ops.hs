@@ -1,0 +1,85 @@
+{-# LANGUAGE FlexibleInstances     #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+
+module Language.Simeon.ACTUS.Ops where
+
+import           Data.Time                                             (Day)
+import           Language.Simeon                                      (Observation (ValueGT, ValueLT),
+                                                                        Value (AddValue, Cond, Constant, MulValue, Scale, SubValue),
+                                                                        (%))
+import           Language.Simeon.ACTUS.Definitions.ContractTerms      (CR, DCC)
+import           Language.Simeon.ACTUS.Model.Utility.ContractRoleSign (contractRoleSign)
+import           Language.Simeon.ACTUS.Model.Utility.YearFraction     (yearFraction)
+
+simeonFixedPoint :: Integer
+simeonFixedPoint = 1000
+
+class ActusOps a where
+    _min  :: a -> a -> a
+    _max  :: a -> a -> a
+    _abs  :: a -> a
+    _zero :: a
+    _one  :: a
+
+class ActusNum a where
+    (+) :: a -> a -> a
+    (-) :: a -> a -> a
+    (*) :: a -> a -> a
+    (/) :: a -> a -> a
+
+class YearFractionOps a b where
+    _y :: DCC -> a -> a -> Maybe a -> b
+
+class DateOps a b where
+    _lt :: a -> a -> b --returns pseudo-boolean
+
+class RoleSignOps a where
+    _r :: CR -> a
+
+instance ActusOps Double where
+    _min  = min
+    _max  = max
+    _abs  = abs
+    _zero = 0.0
+    _one  = 1.0
+
+instance ActusNum Double where
+    a + b       = a Prelude.+ b
+    a - b       = a Prelude.- b
+    a * b       = a Prelude.* b
+    a / b       = a Prelude./ b
+
+instance DateOps Day Double where
+    _lt a b = if a < b then _one else _zero
+
+instance YearFractionOps Day Double where
+    _y = yearFraction
+
+instance RoleSignOps Double where
+    _r = contractRoleSign
+
+instance ActusOps (Value Observation) where
+    _min a b = Cond (ValueLT a b) a b
+    _max a b = Cond (ValueGT a b) a b
+    _abs a = _max a (SubValue _zero a)
+    _zero = Constant 0
+    _one  = Constant simeonFixedPoint
+
+instance DateOps (Value Observation) (Value Observation) where
+    _lt a b = Cond (ValueLT a b) _one _zero
+
+instance RoleSignOps (Value Observation) where
+    _r x = Constant $ (round $ contractRoleSign x) Prelude.* simeonFixedPoint
+
+
+infixl 7  *, /
+infixl 6  +, -
+
+instance ActusNum (Value Observation) where
+    (+)                         = AddValue
+    (-)                         = SubValue
+    a * b                       = Scale (1 % simeonFixedPoint) $ MulValue a b
+    (Constant 0) / (Constant 0) = Constant 0 -- by convention in finance
+    (Constant x) / (Constant y) = Scale (simeonFixedPoint % 1) $ Constant $ div x y
+    x / (Constant y)            = Scale (simeonFixedPoint % y) x
+    _ / _                       = undefined --division not supported in Simeon yet

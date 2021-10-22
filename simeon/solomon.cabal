@@ -1,0 +1,196 @@
+cabal-version: 2.2
+name: simeon
+version: 0.1.0.0
+license: Apache-2.0
+license-files:
+  LICENSE
+  NOTICE
+build-type: Simple
+maintainer: alexander.nemish@bcccoin.io
+stability: experimental
+author: Alexander Nemish
+synopsis:
+  Simeon: financial contracts on Bcc Computation Layer
+description:
+  A reference implementation of Simeon, domain-specific language targeted at
+  the execution of financial contracts in the style of Peyton Jones et al
+  on Bcc Computation Layer.
+category: Language
+extra-doc-files: README.md
+
+source-repository head
+  type: git
+  location: https://github.com/The-Blockchain-Company/zerepoch
+
+flag defer-plugin-errors
+    description:
+        Defer errors from the plugin, useful for things like Haddock that can't handle it.
+    default: False
+    manual: True
+
+common lang
+  default-language: Haskell2010
+  default-extensions: ExplicitForAll ScopedTypeVariables
+                      DeriveGeneric StandaloneDeriving DeriveLift
+                      DeriveFunctor DeriveFoldable
+                      DeriveTraversable
+  ghc-options:
+    -Wall -Wnoncanonical-monad-instances
+    -Wincomplete-uni-patterns -Wincomplete-record-updates
+    -Wredundant-constraints -Widentities
+
+  if flag(defer-plugin-errors)
+    ghc-options: -fplugin-opt ZerepochTx.Plugin:defer-errors
+
+library
+  import: lang
+  hs-source-dirs: src
+  ghc-options:
+    -Wunused-packages
+  build-depends:
+    aeson -any,
+    base -any,
+    bytestring,
+    containers -any,
+    data-default -any,
+    deriving-aeson -any,
+    lens,
+    mtl,
+    newtype-generics,
+    template-haskell -any,
+    zerepoch-chain-index -any,
+    zerepoch-contract -any,
+    zerepoch-core,
+    zerepoch-ledger,
+    zerepoch-tx -any,
+    zerepoch-use-cases,
+    text,
+    vector,
+    sbv >= 8.4,
+    scientific -any,
+    wl-pprint -any,
+    freer-simple -any,
+    semigroups -any
+  if !(impl(ghcjs) || os(ghcjs))
+    build-depends: zerepoch-tx-plugin -any
+  exposed-modules:
+    Language.Simeon
+    Language.Simeon.Extended
+    Language.Simeon.Semantics
+    Language.Simeon.Client
+    Language.Simeon.Util
+    Language.Simeon.Pretty
+    Language.Simeon.Analysis.FSSemantics
+  other-modules:
+
+test-suite simeon-test-long-running
+    import: lang
+    hs-source-dirs:
+      test
+      pab
+    type: exitcode-stdio-1.0
+    main-is: SpecLongRunning.hs
+    other-modules:
+        Spec.PAB.Workflow
+        SimeonContract
+    build-depends:
+        aeson -any,
+        base >=4.9 && <5,
+        containers -any,
+        data-default  -any,
+        hint -any,
+        lens -any,
+        bytestring -any,
+        freer-simple -any,
+        tasty -any,
+        tasty-hunit -any,
+        tasty-quickcheck,
+        text -any,
+        serialise,
+        cborg,
+        zerepoch-chain-index -any,
+        zerepoch-contract -any,
+        zerepoch-ledger -any,
+        simeon,
+        zerepoch-tx -any,
+        QuickCheck,
+        template-haskell -any,
+        streaming -any,
+        zerepoch-pab -any,
+        async -any,
+        prettyprinter -any,
+        purescript-bridge -any,
+        servant-client -any,
+        http-client -any,
+        websockets -any,
+        network -any,
+
+test-suite simeon-test
+    import: lang
+    hs-source-dirs:
+      test
+      pab
+    type: exitcode-stdio-1.0
+    main-is: Spec.hs
+    other-modules:
+        Spec.Simeon.Common
+        Spec.Simeon.Simeon
+        Spec.Simeon.AutoExecute
+        SimeonContract
+    build-depends:
+        aeson -any,
+        base >=4.9 && <5,
+        containers -any,
+        data-default  -any,
+        hint -any,
+        lens -any,
+        bytestring -any,
+        freer-simple -any,
+        tasty -any,
+        tasty-hunit -any,
+        tasty-quickcheck,
+        text -any,
+        serialise,
+        cborg,
+        zerepoch-chain-index -any,
+        zerepoch-contract -any,
+        zerepoch-ledger -any,
+        simeon,
+        zerepoch-tx -any,
+        QuickCheck,
+        template-haskell -any,
+        streaming -any,
+        zerepoch-pab -any,
+        async -any,
+        prettyprinter -any,
+        purescript-bridge -any,
+        servant-client -any,
+        http-client -any,
+        websockets -any,
+        network -any,
+
+-- | The PAB Specialised to the simeon contract(s)
+executable simeon-pab
+  import: lang
+  main-is: Main.hs
+  hs-source-dirs: pab
+  ghc-options:
+    -threaded
+  other-modules:
+    SimeonContract
+  build-depends:
+    base >= 4.9 && < 5,
+    aeson -any,
+    containers -any,
+    data-default -any,
+    freer-simple -any,
+    prettyprinter -any,
+    freer-extras -any,
+    zerepoch-contract -any,
+    zerepoch-ledger -any,
+    zerepoch-pab -any,
+    zerepoch-tx -any,
+    purescript-bridge -any,
+    simeon -any,
+  if !(impl(ghcjs) || os(ghcjs))
+    build-depends: zerepoch-tx-plugin -any

@@ -1,0 +1,12 @@
+How to build plc-agda
+
+starting from the zerepoch root dir:
+```
+cd zerepoch-core
+cabal install
+cd ..
+
+cd metatheory
+agda --compile --ghc-dont-call-ghc Main.lagda
+cabal install
+```

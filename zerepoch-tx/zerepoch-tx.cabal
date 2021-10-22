@@ -1,0 +1,114 @@
+cabal-version: 2.2
+name: zerepoch-tx
+version: 0.1.0.0
+license: Apache-2.0
+license-files:
+  LICENSE
+  NOTICE
+maintainer: michael.peyton-jones@bcccoin.io
+author: Michael Peyton Jones
+synopsis: Libraries for Zerepoch Tx and its prelude
+description:
+    Libraries for Zerepoch Tx and its prelude
+category: Language
+build-type: Simple
+extra-doc-files: README.md
+
+source-repository head
+    type: git
+    location: https://github.com/The-Blockchain-Company/zerepoch
+
+common lang
+    default-language: Haskell2010
+    default-extensions: ExplicitForAll ScopedTypeVariables
+                        DeriveGeneric StandaloneDeriving DeriveLift
+                        GeneralizedNewtypeDeriving DeriveFunctor DeriveFoldable
+                        DeriveTraversable
+    ghc-options: -Wall -Wnoncanonical-monad-instances -Wunused-packages
+                 -Wincomplete-uni-patterns -Wincomplete-record-updates
+                 -Wredundant-constraints -Widentities
+                 -Wunused-packages
+                 -- See Zerepoch Tx readme
+                 -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas
+
+library
+    import: lang
+    hs-source-dirs: src
+    exposed-modules:
+        ZerepochTx
+        ZerepochTx.TH
+        ZerepochTx.Prelude
+        ZerepochTx.Evaluation
+        ZerepochTx.Applicative
+        ZerepochTx.Bool
+        ZerepochTx.IsData
+        ZerepochTx.IsData.Class
+        ZerepochTx.Eq
+        ZerepochTx.Enum
+        ZerepochTx.Either
+        ZerepochTx.Foldable
+        ZerepochTx.Functor
+        ZerepochTx.Lattice
+        ZerepochTx.List
+        ZerepochTx.Ord
+        ZerepochTx.Maybe
+        ZerepochTx.Monoid
+        ZerepochTx.Numeric
+        ZerepochTx.Ratio
+        ZerepochTx.Semigroup
+        ZerepochTx.Sqrt
+        ZerepochTx.Traversable
+        ZerepochTx.AssocMap
+        ZerepochTx.Trace
+        ZerepochTx.These
+        ZerepochTx.Code
+        ZerepochTx.Lift
+        ZerepochTx.Lift.Class
+        ZerepochTx.Builtins
+        ZerepochTx.Builtins.Class
+        ZerepochTx.Builtins.Internal
+        ZerepochTx.Plugin.Utils
+        ZerepochTx.Utils
+    other-modules:
+        ZerepochTx.IsData.Instances
+        ZerepochTx.IsData.TH
+        ZerepochTx.Lift.THUtils
+        ZerepochTx.Lift.Instances
+    build-depends:
+        base >=4.9 && <5,
+        bytestring -any,
+        deepseq -any,
+        template-haskell >=2.13.0.0,
+        th-abstraction -any,
+        prettyprinter -any,
+        text -any,
+        mtl -any,
+        containers -any,
+        flat -any,
+        zerepoch-core -any,
+        lens -any,
+        ghc-prim -any,
+        aeson -any,
+        hashable -any,
+        memory -any,
+        serialise -any
+
+test-suite zerepoch-tx-test
+    import: lang
+    if(impl(ghcjs) || os(windows))
+        buildable: False
+    type: exitcode-stdio-1.0
+    main-is: Spec.hs
+    hs-source-dirs: test
+    build-tool-depends: doctest:doctest
+    build-depends:
+        base >=4.9 && <5,
+        bytestring -any,
+        zerepoch-core -any,
+        zerepoch-tx -any,
+        hedgehog -any,
+        tasty -any,
+        tasty-hedgehog -any,
+        tasty-hunit -any,
+        serialise -any,
+        cborg -any

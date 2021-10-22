@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+set -eEuo pipefail
+
+error () {
+    echo "$*" >&2
+    exit 1
+}
+
+readonly ops_repo="The-Blockchain-Company/zerepoch-ops"
+readonly zerepoch_rev="${GITHUB_SHA:-}"
+if [ -z "${zerepoch_rev}" ]
+then
+    error "GITHUB_SHA environment variable not set!"
+fi
+
+### Argument parsing
+
+if [ "$#" -ne 1 ]
+then
+    error "USAGE: $0 OPS_BRANCH"
+fi
+
+readonly ops_branch="$1"
+
+### Set up scratch space
+
+tmp=/var/lib/empty
+
+cleanup () {
+    if [ "${tmp}" != "/var/lib/empty" ]
+    then
+        rm -fR "${tmp}"
+    fi
+}
+trap cleanup EXIT
+
+tmp="$(mktemp -d)"
+
+declare -r tmp
+
+### Write the new zerepoch-rev.cue
+
+cat > "${tmp}/zerepoch-rev.cue" <<EOF
+package bitte
+
+zerepochRev: "${zerepoch_rev}"
+EOF
+
+
+
+### Get the old zerepoch-rev.cue, exit if it's unchanged
+hub api -XGET -F ref="${ops_branch}" "/repos/${ops_repo}/contents/zerepoch-rev.cue" > "${tmp}/zerepoch-rev.cue-contents.json"
+prev_hash="$(jq --join-output '.sha' < "${tmp}/zerepoch-rev.cue-contents.json")"
+jq --join-output '.content' < "${tmp}/zerepoch-rev.cue-contents.json" | base64 -d > "${tmp}/zerepoch-rev-old.cue"
+if diff -q "${tmp}/zerepoch-rev.cue" "${tmp}/zerepoch-rev-old.cue" >/dev/null
+then
+    exit 0
+fi
+
+### Commit the new zerepoch-rev.cue
+base64 "${tmp}/zerepoch-rev.cue" > "${tmp}/zerepoch-rev.cue-encoded"
+echo "Automatic update: Bump zerepoch to ${zerepoch_rev}" > "${tmp}/commit-message"
+hub api -XPUT \
+    -F message=@"${tmp}/commit-message" \
+    -F content=@"${tmp}/zerepoch-rev.cue-encoded" \
+    -F sha="${prev_hash}" \
+    -F branch="${ops_branch}" \
+    "/repos/${ops_repo}/contents/zerepoch-rev.cue"

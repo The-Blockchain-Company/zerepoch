@@ -1,0 +1,75 @@
+cabal-version: 2.2
+name: zerepoch-errors
+version: 0.1.0.0
+license: Apache-2.0
+license-files:
+  LICENSE
+  NOTICE
+maintainer: nikolaos.bezirgiannis@bcccoin.io
+author: Nikolaos Bezirgiannis
+tested-with: ghc ==8.10.2
+synopsis: The error codes of the Zerepoch compiler & runtime
+description:
+    Contains the documentation and helper code of all the errors and their error-codes
+    which can be thrown by the Zerepoch framework: compiler, interpreter, and client code
+category: Language
+build-type: Simple
+extra-doc-files: README.md
+
+source-repository head
+    type: git
+    location: https://github.com/The-Blockchain-Company/zerepoch
+
+common lang
+    default-language: Haskell2010
+    default-extensions: ExplicitForAll FlexibleContexts ScopedTypeVariables
+                        DeriveGeneric StandaloneDeriving DeriveLift
+                        GeneralizedNewtypeDeriving DeriveFunctor DeriveFoldable
+                        DeriveTraversable DerivingStrategies DerivingVia
+    ghc-options: -Wall -Wnoncanonical-monad-instances -Wunused-packages
+                 -Wincomplete-uni-patterns -Wincomplete-record-updates
+                 -Wredundant-constraints -Widentities
+                 -Wnoncanonical-monoid-instances
+
+library
+  import: lang
+  exposed-modules:
+      Errors,
+      Errors.Docs,
+      Errors.TH.GenCodes
+  other-modules:
+      Errors.TH.GenDocs
+  hs-source-dirs: src
+  build-depends:
+      base >=4.7 && <5,
+      template-haskell >= 2.16,
+      th-abstraction < 0.4,
+      containers >= 0.6,
+      prettyprinter >=1.1.0.1,
+      zerepoch-core -any,
+      zerepoch-tx -any,
+      zerepoch-tx-plugin
+
+executable zerepoch-errors-next
+  import: lang
+  main-is: Main.hs
+  hs-source-dirs: exe-next
+  build-depends:
+      base >=4.7 && <5,
+      zerepoch-core,
+      zerepoch-errors,
+      prettyprinter >=1.1.0.1
+
+executable zerepoch-errors-bootstrap
+  import: lang
+  main-is: Main.hs
+  other-modules:
+      Errors.TH.Bootstrap
+  hs-source-dirs: exe-bootstrap
+  build-depends:
+      base >=4.7 && <5,
+      template-haskell >= 2.16,
+      th-abstraction < 0.4,
+      containers >= 0.6,
+      zerepoch-core,
+      zerepoch-errors

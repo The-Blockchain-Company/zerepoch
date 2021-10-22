@@ -1,0 +1,229 @@
+cabal-version: 2.2
+name: simeon-actus
+version: 0.1.0.0
+license: Apache-2.0
+license-files:
+  LICENSE
+  NOTICE
+build-type: Simple
+maintainer: dmytro.kondratiuk@bcccoin.io
+stability: experimental
+author: Dmytro Kondratiuk
+synopsis:
+  Simeon ACTUS: standardised financial contracts on Bcc Computation Layer
+description:
+  implementation of ACTUS contracts on Simeon
+category: Language
+extra-doc-files: README.md
+
+source-repository head
+  type: git
+  location: https://github.com/The-Blockchain-Company/zerepoch
+
+flag defer-plugin-errors
+    description:
+        Defer errors from the plugin, useful for things like Haddock that can't handle it.
+    default: False
+    manual: True
+
+library
+  hs-source-dirs: src
+  build-depends:
+    aeson -any,
+    base -any,
+    bytestring,
+    containers -any,
+    newtype-generics,
+    template-haskell -any,
+    zerepoch-tx -any,
+    zerepoch-contract -any,
+    zerepoch-ledger,
+    text,
+    vector,
+    simeon -any,
+    time -any,
+    sort -any,
+    validation -any
+  default-language: Haskell2010
+  default-extensions: ExplicitForAll ScopedTypeVariables
+                      DeriveGeneric StandaloneDeriving DeriveLift
+                      DeriveFunctor DeriveFoldable
+                      DeriveTraversable
+  exposed-modules:
+    Language.Simeon.ACTUS.SimeonCompat
+    Language.Simeon.ACTUS.Generator
+    Language.Simeon.ACTUS.Analysis
+    Language.Simeon.ACTUS.Definitions.BusinessEvents
+    Language.Simeon.ACTUS.Definitions.ContractTerms
+    Language.Simeon.ACTUS.Definitions.ContractState
+    Language.Simeon.ACTUS.Definitions.Schedule
+    Language.Simeon.ACTUS.Model.POF.PayoffModel
+    Language.Simeon.ACTUS.Model.POF.Payoff
+    Language.Simeon.ACTUS.Model.POF.PayoffFs
+    Language.Simeon.ACTUS.Model.STF.StateTransitionModel
+    Language.Simeon.ACTUS.Model.STF.StateTransition
+    Language.Simeon.ACTUS.Model.STF.StateTransitionFs
+    Language.Simeon.ACTUS.Model.SCHED.ContractScheduleModel
+    Language.Simeon.ACTUS.Model.SCHED.ContractSchedule
+    Language.Simeon.ACTUS.Model.INIT.StateInitializationModel
+    Language.Simeon.ACTUS.Model.APPLICABILITY.Applicability
+    Language.Simeon.ACTUS.Model.APPLICABILITY.ApplicabilityModel
+    Language.Simeon.ACTUS.Model.Utility.ANN.Annuity
+    Language.Simeon.ACTUS.Model.Utility.DateShift
+    Language.Simeon.ACTUS.Model.Utility.ScheduleGenerator
+    Language.Simeon.ACTUS.Model.Utility.YearFraction
+    Language.Simeon.ACTUS.Model.Utility.ContractRoleSign
+  other-modules:
+    Language.Simeon.ACTUS.Ops
+  ghc-options:
+    -Wall -Wnoncanonical-monad-instances -Wunused-packages
+    -Wincomplete-uni-patterns -Wincomplete-record-updates
+    -Wredundant-constraints -Widentities
+
+executable simeon-shiny
+    main-is: Main.hs
+    other-modules:
+      Language.Simeon.ACTUS.SimeonCompat
+      Language.Simeon.ACTUS.Generator
+      Language.Simeon.ACTUS.Analysis
+      Language.Simeon.ACTUS.Definitions.BusinessEvents
+      Language.Simeon.ACTUS.Definitions.ContractTerms
+      Language.Simeon.ACTUS.Definitions.ContractState
+      Language.Simeon.ACTUS.Definitions.Schedule
+      Language.Simeon.ACTUS.Model.APPLICABILITY.Applicability
+      Language.Simeon.ACTUS.Model.APPLICABILITY.ApplicabilityModel
+      Language.Simeon.ACTUS.Model.POF.PayoffModel
+      Language.Simeon.ACTUS.Model.POF.Payoff
+      Language.Simeon.ACTUS.Model.POF.PayoffFs
+      Language.Simeon.ACTUS.Model.STF.StateTransitionModel
+      Language.Simeon.ACTUS.Model.STF.StateTransition
+      Language.Simeon.ACTUS.Model.STF.StateTransitionFs
+      Language.Simeon.ACTUS.Model.SCHED.ContractScheduleModel
+      Language.Simeon.ACTUS.Model.SCHED.ContractSchedule
+      Language.Simeon.ACTUS.Model.INIT.StateInitializationModel
+      Language.Simeon.ACTUS.Model.Utility.ANN.Annuity
+      Language.Simeon.ACTUS.Model.Utility.DateShift
+      Language.Simeon.ACTUS.Model.Utility.ScheduleGenerator
+      Language.Simeon.ACTUS.Model.Utility.YearFraction
+      Language.Simeon.ACTUS.Model.Utility.ContractRoleSign
+      Language.Simeon.ACTUS.Ops
+    hs-source-dirs: app src
+    default-language: Haskell2010
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+                 -Wincomplete-uni-patterns -Wincomplete-record-updates
+    build-depends:
+      aeson -any,
+      base -any,
+      bytestring,
+      containers -any,
+      deriving-aeson -any,
+      mtl,
+      newtype-generics,
+      template-haskell -any,
+      zerepoch-tx -any,
+      zerepoch-contract -any,
+      zerepoch-ledger,
+      text,
+      vector,
+      sbv >= 8.4,
+      wl-pprint -any,
+      freer-simple -any,
+      simeon -any,
+      time -any,
+      loch-th -any,
+      sort -any,
+      inline-r -any,
+      validation -any
+
+executable simeon-actus-test-kit
+    main-is: Main.hs
+    other-modules:
+      Language.Simeon.ACTUS.SimeonCompat
+      Language.Simeon.ACTUS.Generator
+      Language.Simeon.ACTUS.QCGenerator
+      Language.Simeon.ACTUS.Analysis
+      Language.Simeon.ACTUS.Definitions.BusinessEvents
+      Language.Simeon.ACTUS.Definitions.ContractTerms
+      Language.Simeon.ACTUS.Definitions.ContractState
+      Language.Simeon.ACTUS.Definitions.Schedule
+      Language.Simeon.ACTUS.Model.APPLICABILITY.Applicability
+      Language.Simeon.ACTUS.Model.APPLICABILITY.ApplicabilityModel
+      Language.Simeon.ACTUS.Model.POF.PayoffModel
+      Language.Simeon.ACTUS.Model.POF.Payoff
+      Language.Simeon.ACTUS.Model.POF.PayoffFs
+      Language.Simeon.ACTUS.Model.STF.StateTransitionModel
+      Language.Simeon.ACTUS.Model.STF.StateTransition
+      Language.Simeon.ACTUS.Model.STF.StateTransitionFs
+      Language.Simeon.ACTUS.Model.SCHED.ContractScheduleModel
+      Language.Simeon.ACTUS.Model.SCHED.ContractSchedule
+      Language.Simeon.ACTUS.Model.INIT.StateInitializationModel
+      Language.Simeon.ACTUS.Model.Utility.ANN.Annuity
+      Language.Simeon.ACTUS.Model.Utility.DateShift
+      Language.Simeon.ACTUS.Model.Utility.ScheduleGenerator
+      Language.Simeon.ACTUS.Model.Utility.YearFraction
+      Language.Simeon.ACTUS.Model.Utility.ContractRoleSign
+      Language.Simeon.ACTUS.Ops
+    hs-source-dirs: testkit src
+    default-language: Haskell2010
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+                 -Wincomplete-uni-patterns -Wincomplete-record-updates
+    build-depends:
+      aeson -any,
+      base -any,
+      bytestring,
+      containers -any,
+      mtl,
+      newtype-generics,
+      template-haskell -any,
+      zerepoch-tx -any,
+      zerepoch-contract -any,
+      zerepoch-ledger,
+      text,
+      vector,
+      simeon -any,
+      time -any,
+      sort -any,
+      validation -any,
+      servant >= 0.16,
+      servant-client -any,
+      http-client -any,
+      servant-client-core -any,
+      QuickCheck
+
+test-suite simeon-actus-test
+    default-language: Haskell2010
+    hs-source-dirs: test
+    type: exitcode-stdio-1.0
+    main-is: Spec.hs
+    other-modules:
+        Spec.Simeon.Util
+        Spec.Simeon.Actus
+    build-depends:
+        vector -any,
+        unordered-containers -any,
+        scientific -any,
+        extra -any,
+        utf8-string -any,
+        aeson -any,
+        base >=4.9 && <5,
+        containers -any,
+        hedgehog -any,
+        lens -any,
+        bytestring -any,
+        tasty -any,
+        tasty-hunit -any,
+        text -any,
+        cborg,
+        zerepoch-ledger -any,
+        zerepoch-contract -any,
+        simeon,
+        simeon-actus,
+        zerepoch-tx -any,
+        template-haskell -any,
+        simeon -any,
+        time -any,
+        validation -any
+  ghc-options:
+    -Wall -Wnoncanonical-monad-instances
+    -Wincomplete-uni-patterns -Wincomplete-record-updates
+    -Wredundant-constraints -Widentities

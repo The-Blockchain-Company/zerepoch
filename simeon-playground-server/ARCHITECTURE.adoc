@@ -1,0 +1,7 @@
+=== `simeon-playground-server`
+
+This packages contains the server that backs the Simeon Playground by
+compiling user code and evaluating their simulations.
+
+It also defines an executable that generates Purescript bindings for the types that
+the Purescript code needs.

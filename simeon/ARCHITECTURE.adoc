@@ -1,0 +1,4 @@
+=== `simeon`
+
+This package contains an implementation of the Simeon interpreter as a Zerepoch
+contract.

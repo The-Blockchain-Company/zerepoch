@@ -1,0 +1,3 @@
+=== `web-common-simeon`
+
+This contains frontend code that is shared between simeon frontend projects.

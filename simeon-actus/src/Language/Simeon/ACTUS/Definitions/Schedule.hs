@@ -1,0 +1,24 @@
+module Language.Simeon.ACTUS.Definitions.Schedule where
+
+import           Data.Time                                         (Day)
+import           Language.Simeon.ACTUS.Definitions.BusinessEvents (EventType)
+
+data ShiftedDay = ShiftedDay {
+    paymentDay     :: Day,
+    calculationDay :: Day
+} deriving (Eq, Ord, Show)
+
+type ShiftedSchedule = [ShiftedDay]
+
+data CashFlow = CashFlow {
+    tick               :: Integer,
+    cashContractId     :: String,
+    cashParty          :: String,
+    cashCounterParty   :: String,
+    cashPaymentDay     :: Day,
+    cashCalculationDay :: Day,
+    cashEvent          :: EventType,
+    amount             :: Double,
+    currency           :: String
+} deriving (Show)
+

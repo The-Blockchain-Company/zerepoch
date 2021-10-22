@@ -1,0 +1,218 @@
+-- Bump this if you need newer packages
+index-state: 2021-08-14T00:00:00Z
+
+packages: doc
+          fake-pab
+          freer-extras
+          simeon
+          simeon-actus
+          simeon-playground-server
+          simeon-dashboard-server
+          simeon-symbolic
+          playground-common
+          zerepoch-benchmark
+          zerepoch-chain-index
+          zerepoch-contract
+          zerepoch-core
+          zerepoch-errors
+          zerepoch-ledger
+          zerepoch-ledger-api
+          zerepoch-metatheory
+          zerepoch-pab
+          zerepoch-playground-server
+          zerepoch-tx
+          zerepoch-tx-plugin
+          zerepoch-use-cases
+          prettyprinter-configurable
+          quickcheck-dynamic
+          web-ghc
+          word-array
+          stubs/zerepoch-ghc-stub
+
+-- We never, ever, want this.
+write-ghc-environment-files: never
+
+-- Always build tests and benchmarks.
+tests: true
+benchmarks: true
+
+-- The only sensible test display option
+test-show-details: streaming
+
+allow-newer:
+           -- Pins to an old version of Template Haskell, unclear if/when it will be updated
+           size-based:template-haskell
+           , shardagnostic-consensus-cole:formatting
+           , beam-core:aeson
+           , beam-sqlite:aeson
+           , beam-sqlite:dlist
+           , beam-migrate:aeson
+
+constraints:
+  -- big breaking change here, inline-r doens't have an upper bound
+  singletons < 3.0
+  -- bizarre issue: in earlier versions they define their own 'GEq', in newer
+  -- ones they reuse the one from 'some', but there isn't e.g. a proper version
+  -- constraint from dependent-sum-template (which is the library we actually use).
+  , dependent-sum > 0.6.2.0
+
+-- See the note on nix/pkgs/default.nix:agdaPackages for why this is here.
+-- (NOTE this will change to ieee754 in newer versions of nixpkgs).
+extra-packages: ieee, filemanip
+
+-- These packages appear in our dependency tree and are very slow to build.
+-- Empirically, turning off optimization shaves off ~50% build time.
+-- It also mildly improves recompilation avoidance.
+-- For deve work we don't care about performance so much, so this is okay.
+package bcc-ledger-aurum
+  optimization: False
+package shardagnostic-consensus-sophie
+  optimization: False
+package shardagnostic-consensus-bcc
+  optimization: False
+package bcc-api
+  optimization: False
+
+-- https://github.com/Quid2/flat/pull/22 fixes a potential exception
+-- when decoding invalid (e.g. malicious) text literals. Pull 22 is equivalent tag ending c20d8 below
+source-repository-package
+  type: git
+  location: https://github.com/michaelpj/flat.git
+  tag: ee59880f47ab835dbd73bea0847dab7869fc20d8
+  --sha256: 1lrzknw765pz2j97nvv9ip3l1mcpf2zr4n56hwlz0rk7wq7ls4cm
+
+-- Needs some patches, but upstream seems to be fairly dead (no activity in > 1 year)
+source-repository-package
+  type: git
+  location: https://github.com/shmish111/purescript-bridge.git
+  tag: 6a92d7853ea514be8b70bab5e72077bf5a510596
+
+source-repository-package
+  type: git
+  location: https://github.com/shmish111/servant-purescript.git
+  tag: a76104490499aa72d40c2790d10e9383e0dbde63
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-crypto.git
+  tag: 3e03966459d94e6020364487f85451b641ee64a4
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-base
+  tag: 027956bcb59f227e9b8c2032aacbb945394f4785
+  subdir:
+    base-deriving-via
+    binary
+    binary/test
+    bcc-crypto-class
+    bcc-crypto-praos
+    bcc-crypto-tests
+    measures
+    orphans-deriving-via
+    slotting
+    strict-containers
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-prelude
+  tag: 583f26698d2a46b06ea251a4b3f1762d909f9ecb
+  subdir:
+    bcc-prelude
+    bcc-prelude-test
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/shardagnostic-network
+
+  subdir:
+    monoidal-synchronisation
+    typed-protocols
+    typed-protocols-examples
+    shardagnostic-network
+    shardagnostic-network-testing
+    shardagnostic-network-framework
+    shardagnostic-consensus
+    shardagnostic-consensus-cole
+    shardagnostic-consensus-bcc
+    shardagnostic-consensus-sophie
+    io-sim
+    io-classes
+    network-mux
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcccoin-monitoring-framework
+  -- Important Note: Read below, before changing this!
+  tag: 4d9367fd730a383a25049621dd442632c8316f50
+  -- Repo tag below may be of reference for future testing and development
+  -- as it references a prior development branch 
+  -- the *develop* branch of said repo: 46f994e216a1f8b36fe4669b47b2a7011b0e153c 
+  --   * <https://github.com/The-Blockchain-Company/bcccoin-monitoring-framework/commits/develop>
+  -- (not master!)
+  --
+  -- In particular we rely on the code from this PR:
+  --  * <https://github.com/The-Blockchain-Company/bcccoin-monitoring-framework/pull/622>
+  -- being merged.
+  subdir:
+    bcccoin-monitoring
+    tracer-transformers
+    contra-tracer
+    plugins/backend-aggregation
+    plugins/backend-ekg
+    plugins/backend-monitoring
+    plugins/backend-trace-forwarder
+    plugins/scribe-systemd
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-ledger-specs
+  tag: 
+  subdir:
+    cole/chain/executable-spec
+    cole/crypto
+    cole/crypto/test
+    cole/ledger/executable-spec
+    cole/ledger/impl
+    cole/ledger/impl/test
+    semantics/executable-spec
+    semantics/small-steps-test
+    sophie/chain-and-ledger/dependencies/non-integer
+    sophie/chain-and-ledger/executable-spec
+    sophie/chain-and-ledger/sophie-spec-ledger-test
+    sophie-ma/impl
+    bcc-ledger-core
+    aurum/impl
+
+-- A lot of zerepoch dependencies have to be synchronized with the dependencies of
+-- bcc-node. If you update bcc-node, please make sure that all dependencies
+-- of bcc-node are also updated.
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-node.git
+  tag: 
+  subdir:
+    bcc-api
+    bcc-node
+    bcc-cli
+    bcc-config
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/optparse-applicative
+  tag: 7497a29cb998721a9068d5725d49461f2bba0e7a
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/Win32-network
+  tag: 16cadcfe30bae30e8e6362f5087cad9f5bc274d5
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/hedgehog-extras
+  tag: 0bce8b7a9ddd4ac0acc4200c1fb51ca746e19409
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/shepards
+  tag: f3f78f1f98060115122a23f38eaf2c9a42806b87
