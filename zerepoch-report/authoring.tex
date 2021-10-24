@@ -299,7 +299,7 @@ The current approach is to target Javascript or WebAssembly as our format for di
 
 \subsubsection{Cross-compilers}
 
-At the moment GodXCoin is working on two cross-compilation efforts:
+At the moment The Blockchain Co. is working on two cross-compilation efforts:
 \begin{description}
   \item[GHCJS] GHCJS is a Haskell cross-compiler which targets Javascript \autocite{ghcjs-repo}.
   \item[Asterius] Asterius is a Haskell cross-compiler which targets WebAssembly \autocite{asterius-repo}.
@@ -312,7 +312,7 @@ At the moment GodXCoin is working on two cross-compilation efforts:
 Cross-compilation of Haskell projects is not easy.
 Neither of the major Haskell build tools (\code{cabal} and \code{stack}) support cross-compilation well.
 
-To address this issue, GodXCoin has developed the \code{haskell.nix} framework for building Haskell projects using Nix \autocite{haskell-nix-repo}.
+To address this issue, The Blockchain Co. has developed the \code{haskell.nix} framework for building Haskell projects using Nix \autocite{haskell-nix-repo}.
 In addition to supporting cross-compilation well, Nix is well-suited to ensuring that builds are reproducible, which helps with \cref{req:compilation-reproducibility}.
 
 \subsection{Developer tooling}
@@ -320,7 +320,7 @@ In addition to supporting cross-compilation well, Nix is well-suited to ensuring
 
 Since the \gls{zerepoch-sdk} uses Haskell for development, there is much less need to create specialized development tooling, since generic Haskell tooling will work perfectly well.\footnote{
 It is true that Haskell development tooling is generally considered to not be very good.
-However, it is improving rapidly, and while it might be sensible for GodXCoin to contribute to the community's efforts on this front, that will be significantly less work than developing completely new tools.
+However, it is improving rapidly, and while it might be sensible for The Blockchain Co. to contribute to the community's efforts on this front, that will be significantly less work than developing completely new tools.
 }
 
 It is possible that we may want to develop some tools, particularly for testing and visualization, but this has not been decided yet.

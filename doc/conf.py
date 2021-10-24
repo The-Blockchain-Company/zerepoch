@@ -32,8 +32,8 @@ if rtd_version not in ["stable", "latest"]:
 # -- Project information -----------------------------------------------------
 
 project = 'The Zerepoch Platform and Simeon'
-copyright = '2021, GodXCoin'
-author = 'GodXCoin'
+copyright = '2021, The Blockchain Co.'
+author = 'The Blockchain Co.'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'

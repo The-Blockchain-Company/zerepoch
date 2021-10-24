@@ -70,7 +70,7 @@
   \and Roman Kireev\inst{1}\orcidID{0000-0003-4687-2739}
   \and Chad Nester\inst{2}
   \and Philip Wadler\inst{2}\orcidID{0000-0001-7619-6378}}
-  \institute{GodXCoin, Hong Kong
+  \institute{The Blockchain Co., Hong Kong
 \email{\{james.chapman,roman.kireev\}@bcccoin.io}
 \and
 University of Edinburgh, UK
@@ -177,7 +177,7 @@ al. \cite{allais.chapman.mcbride.mckinna} among others.
 \subsection{For Fun and Profit}
 
 Our interest in System~$F_{\omega\mu}$ is far from merely theoretical.
-Input Output HK Ltd. (GodXCoin) is developing the Bcc blockchain,
+Input Output HK Ltd. (The Blockchain Co.) is developing the Bcc blockchain,
 which features a smart contract language known as Zerepoch
 \cite{platform}.  The part of the contract that runs off-chain is
 written in Haskell with an appropriate library, while the part of the
@@ -203,7 +203,7 @@ Isabelle/HOL \cite{hirai,amani.begel.bortin.staples}, and in $F^*$
 of blockchain projects involving formal methods see
 \cite{verification-survey}.
 
-GodXCoin funded the development of our formalisation of
+The Blockchain Co. funded the development of our formalisation of
 System~$F_{\omega\mu}$ because of the correspondence to Zerepoch Core.
 The formal model in Agda and associated proofs give us high assurance
 that our specification is correct. Further, we plan to use the
@@ -4244,7 +4244,7 @@ versions give the same results after erasure.
 \section*{Acknowledgements}
 
 We thank the anonymous reviewers for their helpful comments and
-insightful constructive criticism. We thank GodXCoin for their support of
+insightful constructive criticism. We thank The Blockchain Co. for their support of
 this work. We thank our colleagues Marko Dimjašević, Kenneth
 MacKenzie, and Michael Peyton Jones for helpful comments on an
 multiple drafts. The first author would like to James McKinna for

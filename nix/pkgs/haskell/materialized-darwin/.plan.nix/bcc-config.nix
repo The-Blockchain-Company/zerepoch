@@ -15,7 +15,7 @@
       license = "Apache-2.0";
       copyright = "";
       maintainer = "operations@bcccoin.io";
-      author = "GodXCoin";
+      author = "The Blockchain Co.";
       homepage = "";
       url = "";
       synopsis = "";

@@ -13,9 +13,9 @@
       specVersion = "2.2";
       identifier = { name = "bcc-crypto-test"; version = "1.3.0"; };
       license = "Apache-2.0";
-      copyright = "2018 GodXCoin";
+      copyright = "2018 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
-      author = "GodXCoin";
+      author = "The Blockchain Co.";
       homepage = "";
       url = "";
       synopsis = "Test helpers from bcc-crypto exposed to other packages";

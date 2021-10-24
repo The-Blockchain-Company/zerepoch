@@ -38,7 +38,7 @@ exports.greyCircle = require("static/images/grey-circle.svg");
 
 exports.selectButton = require("static/images/select-button.svg");
 
-exports.bcccoinLogo = require("static/images/GodXCoin-logo.svg");
+exports.bcccoinLogo = require("static/images/The Blockchain Co.-logo.svg");
 
 exports.haskellIcon = require("static/images/haskell-icon.svg");
 

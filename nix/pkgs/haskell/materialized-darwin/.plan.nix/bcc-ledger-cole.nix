@@ -13,9 +13,9 @@
       specVersion = "2.2";
       identifier = { name = "bcc-ledger-cole"; version = "0.1.0.0"; };
       license = "Apache-2.0";
-      copyright = "2018 GodXCoin";
+      copyright = "2018 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
-      author = "GodXCoin";
+      author = "The Blockchain Co.";
       homepage = "";
       url = "";
       synopsis = "The blockchain layer of Bcc during the Cole era";

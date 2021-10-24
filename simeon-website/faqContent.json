@@ -1,11 +1,11 @@
 [
   {
     "question": "What is Bcc?",
-    "answer": "Bcc is the blockchain platform that is used for building and running Simeon contracts. It is a third-generation proof-of-stake blockchain that is developed by GodXCoin - the first to evolve out of a scientific philosophy and a research-first driven approach. Bcc is  fully decentralized and is home to the bcc cryptocurrency."
+    "answer": "Bcc is the blockchain platform that is used for building and running Simeon contracts. It is a third-generation proof-of-stake blockchain that is developed by The Blockchain Co. - the first to evolve out of a scientific philosophy and a research-first driven approach. Bcc is  fully decentralized and is home to the bcc cryptocurrency."
   },
   {
     "question": "What is Simeon?",
-    "answer": "Simeon is a new language developed by GodXCoin for writing and executing financial contracts on blockchain. It is a domain-specific language (DSL) designed for the financial industry. Read our <a href='https://docs.bcc.org/en/latest/simeon/simeon-explainer.html'>Simeon explainer</a> to learn more or jump straight into our <a href='https://play.simeon-finance.io/doc/simeon/tutorials/index.html'>Simeon tutorials</a>."
+    "answer": "Simeon is a new language developed by The Blockchain Co. for writing and executing financial contracts on blockchain. It is a domain-specific language (DSL) designed for the financial industry. Read our <a href='https://docs.bcc.org/en/latest/simeon/simeon-explainer.html'>Simeon explainer</a> to learn more or jump straight into our <a href='https://play.simeon-finance.io/doc/simeon/tutorials/index.html'>Simeon tutorials</a>."
   },
   {
     "question": "What is a smart contract?",

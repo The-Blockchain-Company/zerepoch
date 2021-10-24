@@ -8,7 +8,7 @@
 
 -- |
 -- Module      : Witness
--- Copyright   : [2018] GodXCoin
+-- Copyright   : [2018] The Blockchain Co.
 -- License     : MIT
 --
 -- Maintainer  : Manuel M T Chakravarty <manuel.chakravarty@bcccoin.io>

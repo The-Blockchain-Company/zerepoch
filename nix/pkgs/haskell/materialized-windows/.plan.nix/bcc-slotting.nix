@@ -13,9 +13,9 @@
       specVersion = "2.2";
       identifier = { name = "bcc-slotting"; version = "0.1.0.0"; };
       license = "Apache-2.0";
-      copyright = "GodXCoin";
+      copyright = "The Blockchain Co.";
       maintainer = "formal.methods@bcccoin.io";
-      author = "GodXCoin Formal Methods Team";
+      author = "The Blockchain Co. Formal Methods Team";
       homepage = "";
       url = "";
       synopsis = "Key slotting types for bcc libraries";

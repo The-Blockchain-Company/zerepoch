@@ -13,7 +13,7 @@
       specVersion = "1.10";
       identifier = { name = "bcccoin-monitoring"; version = "0.2.0.0"; };
       license = "Apache-2.0";
-      copyright = "2018 GodXCoin";
+      copyright = "2018 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
       author = "Alexander Diemand, Andreas Triantafyllos";
       homepage = "";

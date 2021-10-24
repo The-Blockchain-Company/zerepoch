@@ -157,5 +157,5 @@ bond.
    issuer defaults; if the issuer does make the payment in time, then
    the guarantor should recover their money.
 
-GodXCoin plans to implement the full ACTUS standard using Simeon and Zerepoch
+The Blockchain Co. plans to implement the full ACTUS standard using Simeon and Zerepoch
 over the coming year.

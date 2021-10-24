@@ -13,9 +13,9 @@
       specVersion = "1.10";
       identifier = { name = "base-deriving-via"; version = "0.1.0.0"; };
       license = "Apache-2.0";
-      copyright = "GodXCoin";
+      copyright = "The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
-      author = "GodXCoin";
+      author = "The Blockchain Co.";
       homepage = "";
       url = "";
       synopsis = "A general hook newtype for use with deriving via";

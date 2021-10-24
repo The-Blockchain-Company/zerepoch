@@ -18,7 +18,7 @@
       license = "Apache-2.0";
       copyright = "2021 The-Blockchain-Company ";
       maintainer = "operations@bcccoin.io";
-      author = "GodXCoin Engineering Team";
+      author = "The Blockchain Co. Engineering Team";
       homepage = "";
       url = "";
       synopsis = "The instantation of the Shardagnostic consensus layer used by Bcc";

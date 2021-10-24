@@ -266,7 +266,7 @@ mainFooter =
         [ classes [ navbarNav ] ]
         [ copyright
         , nbsp
-        , text "2020 GodXCoin Ltd."
+        , text "2020 The Blockchain Co. Ltd."
         ]
     , div
         [ classes [ navbarNav, mlAuto ] ]

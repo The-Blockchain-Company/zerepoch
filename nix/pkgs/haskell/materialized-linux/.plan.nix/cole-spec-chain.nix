@@ -15,7 +15,7 @@
       license = "Apache-2.0";
       copyright = "";
       maintainer = "formal.methods@bcccoin.io";
-      author = "GodXCoin Formal Methods Team";
+      author = "The Blockchain Co. Formal Methods Team";
       homepage = "https://github.com/The-Blockchain-Company/bcc-legder-specs";
       url = "";
       synopsis = "Executable specification of the Bcc blockchain";

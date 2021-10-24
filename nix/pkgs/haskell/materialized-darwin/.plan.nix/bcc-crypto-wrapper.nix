@@ -13,9 +13,9 @@
       specVersion = "2.2";
       identifier = { name = "bcc-crypto-wrapper"; version = "1.3.0"; };
       license = "Apache-2.0";
-      copyright = "2019 GodXCoin";
+      copyright = "2019 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
-      author = "GodXCoin";
+      author = "The Blockchain Co.";
       homepage = "";
       url = "";
       synopsis = "Cryptographic primitives used in the Bcc project";

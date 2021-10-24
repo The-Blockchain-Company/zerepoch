@@ -13,7 +13,7 @@
       specVersion = "2.0";
       identifier = { name = "lobemo-backend-ekg"; version = "0.1.0.1"; };
       license = "Apache-2.0";
-      copyright = "2019 GodXCoin";
+      copyright = "2019 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
       author = "Alexander Diemand";
       homepage = "https://github.com/The-Blockchain-Company/bcccoin-monitoring-framework";

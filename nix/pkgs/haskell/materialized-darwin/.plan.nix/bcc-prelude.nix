@@ -13,9 +13,9 @@
       specVersion = "2.2";
       identifier = { name = "bcc-prelude"; version = "0.1.0.0"; };
       license = "MIT";
-      copyright = "2018-2021 GodXCoin";
+      copyright = "2018-2021 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
-      author = "GodXCoin";
+      author = "The Blockchain Co.";
       homepage = "";
       url = "";
       synopsis = "A Prelude replacement for the Bcc project";

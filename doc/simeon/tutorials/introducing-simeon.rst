@@ -147,7 +147,7 @@ Research-based
 
 Simeon is based on original, peer reviewed, research conducted by the 
 Simeon team, initially at the University of Kent supported by a research grant 
-from GodXCoin, and latterly as an internal engineering team in the company. We are also
+from The Blockchain Co., and latterly as an internal engineering team in the company. We are also
 working jointly with Wyoming Advanced Blockchain R&D Laboratory (WABL) at the University of Wyoming.
 If you are interested in working with us, please get in touch.
 

@@ -145,7 +145,7 @@ Status updates delivered through the websocket protocol only include the new log
 ## Simeon dashboard app
 
 The Simeon dashboard is an application that uses the PAB to run multiple instances of the Simeon contract.
-The dashboard is hosted centrally (GodXCoin), allowing interested users to log in an try out some Simeon contracts on the emulated blockchain.
+The dashboard is hosted centrally (The Blockchain Co.), allowing interested users to log in an try out some Simeon contracts on the emulated blockchain.
 It uses simulated Bcc only, no real funds.
 It is intended to be reset frequently, approx. every 24h.
 

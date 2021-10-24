@@ -1,5 +1,5 @@
 module Zerepoch.PAB.Monitoring.Monitoring(
-    -- * GodXCoin Monitoring Library Configuration
+    -- * The Blockchain Co. Monitoring Library Configuration
     module Zerepoch.PAB.Monitoring.Config
 
    -- * Structural Logging data types

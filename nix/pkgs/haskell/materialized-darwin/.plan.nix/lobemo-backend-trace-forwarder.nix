@@ -16,7 +16,7 @@
         version = "0.1.0.0";
         };
       license = "Apache-2.0";
-      copyright = "2020 GodXCoin";
+      copyright = "2020 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
       author = "Alexander Diemand";
       homepage = "https://github.com/The-Blockchain-Company/bcccoin-monitoring-framework";

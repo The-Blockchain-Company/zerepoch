@@ -13,7 +13,7 @@
       specVersion = "1.10";
       identifier = { name = "contra-tracer"; version = "0.1.0.0"; };
       license = "Apache-2.0";
-      copyright = "2019 GodXCoin";
+      copyright = "2019 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
       author = "Neil Davies, Alexander Diemand, Andreas Triantafyllos";
       homepage = "";

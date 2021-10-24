@@ -13,9 +13,9 @@
       specVersion = "2.2";
       identifier = { name = "bcc-binary-test"; version = "1.3.0"; };
       license = "MIT";
-      copyright = "2019-2021 GodXCoin";
+      copyright = "2019-2021 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
-      author = "GodXCoin";
+      author = "The Blockchain Co.";
       homepage = "";
       url = "";
       synopsis = "Test helpers from bcc-binary exposed to other packages";

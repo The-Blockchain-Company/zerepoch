@@ -13,9 +13,9 @@
       specVersion = "2.2";
       identifier = { name = "bcc-crypto-praos"; version = "2.0.0"; };
       license = "Apache-2.0";
-      copyright = "2019-2021 GodXCoin";
+      copyright = "2019-2021 The Blockchain Co.";
       maintainer = "operations@bcccoin.io";
-      author = "GodXCoin";
+      author = "The Blockchain Co.";
       homepage = "";
       url = "";
       synopsis = "Crypto primitives from libsodium";
