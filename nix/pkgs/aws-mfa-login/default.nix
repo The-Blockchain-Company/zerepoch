@@ -11,7 +11,7 @@ writeShellScriptBin "aws-mfa-login" ''
     echo "Please call the script with your AWS account username followed by the MFA code"
     exit 1
   fi
-  export AWS_PROFILE=dev-mantis
+  export AWS_PROFILE=dev-shardis
   unset AWS_SESSION_TOKEN
   unset AWS_SECRET_ACCESS_KEY
   unset AWS_ACCESS_KEY_ID
