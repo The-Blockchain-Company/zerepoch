@@ -106,7 +106,7 @@ source-repository-package
     binary
     binary/test
     bcc-crypto-class
-    bcc-crypto-praos
+    bcc-crypto-optimum
     bcc-crypto-tests
     measures
     orphans-deriving-via

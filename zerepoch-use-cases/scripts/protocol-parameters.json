@@ -5,7 +5,7 @@
     "utxoCostPerWord": 1,
     "decentralization": 0.6,
     "poolRetireMaxEpoch": 18,
-    "extraPraosEntropy": null,
+    "extraOptimumEntropy": null,
     "collateralPercentage": 1,
     "stakePoolTargetNum": 150,
     "maxBlockBodySize": 65536,

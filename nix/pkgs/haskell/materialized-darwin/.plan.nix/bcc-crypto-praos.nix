@@ -11,7 +11,7 @@
     flags = { development = false; external-libsodium-vrf = true; };
     package = {
       specVersion = "2.2";
-      identifier = { name = "bcc-crypto-praos"; version = "2.0.0"; };
+      identifier = { name = "bcc-crypto-optimum"; version = "2.0.0"; };
       license = "Apache-2.0";
       copyright = "2019-2021 The Blockchain Co.";
       maintainer = "operations@blockchain-company.io";
@@ -63,7 +63,7 @@
           (pkgconfPkgs."libsodium" or (errorHandler.pkgConfDepError "libsodium"))
           ];
         buildable = true;
-        modules = [ "Bcc/Crypto/VRF/Praos" ];
+        modules = [ "Bcc/Crypto/VRF/Optimum" ];
         cSources = (pkgs.lib).optionals (!flags.external-libsodium-vrf) [
           "cbits/crypto_vrf.c"
           "cbits/convert.c"
@@ -86,5 +86,5 @@
       rev = "minimal";
       sha256 = "";
       };
-    postUnpack = "sourceRoot+=/bcc-crypto-praos; echo source root reset to \$sourceRoot";
+    postUnpack = "sourceRoot+=/bcc-crypto-optimum; echo source root reset to \$sourceRoot";
     }

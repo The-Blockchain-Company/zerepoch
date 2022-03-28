@@ -18,8 +18,8 @@
       author = "The Blockchain Co.";
       homepage = "";
       url = "";
-      synopsis = "Tests for bcc-crypto-class and -praos";
-      description = "Tests for bcc-crypto-class and -praos";
+      synopsis = "Tests for bcc-crypto-class and -optimum";
+      description = "Tests for bcc-crypto-class and -optimum";
       buildType = "Simple";
       isLocal = true;
       detailLevel = "FullDetails";
@@ -38,7 +38,7 @@
           (hsPkgs."bytestring" or (errorHandler.buildDepError "bytestring"))
           (hsPkgs."bcc-binary" or (errorHandler.buildDepError "bcc-binary"))
           (hsPkgs."bcc-crypto-class" or (errorHandler.buildDepError "bcc-crypto-class"))
-          (hsPkgs."bcc-crypto-praos" or (errorHandler.buildDepError "bcc-crypto-praos"))
+          (hsPkgs."bcc-crypto-optimum" or (errorHandler.buildDepError "bcc-crypto-optimum"))
           (hsPkgs."bcc-prelude" or (errorHandler.buildDepError "bcc-prelude"))
           (hsPkgs."cborg" or (errorHandler.buildDepError "cborg"))
           (hsPkgs."cryptonite" or (errorHandler.buildDepError "cryptonite"))

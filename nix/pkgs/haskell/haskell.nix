@@ -251,7 +251,7 @@ let
           ieee.components.library.libs = lib.mkForce [ ];
 
           # See https://github.com/The-Blockchain-Company/tbco-nix/pull/488
-          bcc-crypto-praos.components.library.pkgconfig = lib.mkForce [ [ libsodium-vrf ] ];
+          bcc-crypto-optimum.components.library.pkgconfig = lib.mkForce [ [ libsodium-vrf ] ];
           bcc-crypto-class.components.library.pkgconfig = lib.mkForce [ [ libsodium-vrf ] ];
         };
       })

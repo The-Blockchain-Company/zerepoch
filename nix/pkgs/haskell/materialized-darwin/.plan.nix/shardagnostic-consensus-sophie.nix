@@ -75,7 +75,7 @@
           "Shardagnostic/Consensus/Sophie/Ledger/NetworkProtocolVersion"
           "Shardagnostic/Consensus/Sophie/Ledger/Query"
           "Shardagnostic/Consensus/Sophie/Ledger/PeerSelection"
-          "Shardagnostic/Consensus/Sophie/Ledger/TPraos"
+          "Shardagnostic/Consensus/Sophie/Ledger/TOptimum"
           "Shardagnostic/Consensus/Sophie/Node"
           "Shardagnostic/Consensus/Sophie/Node/Serialisation"
           "Shardagnostic/Consensus/Sophie/Protocol"

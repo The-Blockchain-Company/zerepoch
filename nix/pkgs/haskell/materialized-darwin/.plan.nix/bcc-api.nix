@@ -102,7 +102,7 @@
           "Bcc/Api/Json"
           "Bcc/Api/Key"
           "Bcc/Api/KeysCole"
-          "Bcc/Api/KeysPraos"
+          "Bcc/Api/KeysOptimum"
           "Bcc/Api/KeysSophie"
           "Bcc/Api/LedgerState"
           "Bcc/Api/Modes"

@@ -26,7 +26,7 @@ MaxConcurrencyDeadline: 2
 # This is the instance of the Shardagnostic family that we are running.
 # "RealPBFT" is the real (permissive) OBFT protocol, which is what we use on
 # mainnet in Cole era.
-Protocol: TPraos
+Protocol: TOptimum
 
 # The mainnet does not include the network magic into addresses. Testnets do.
 RequiresNetworkMagic: RequiresNoMagic

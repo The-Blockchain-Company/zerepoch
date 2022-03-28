@@ -40,7 +40,7 @@
           (hsPkgs."bytestring" or (errorHandler.buildDepError "bytestring"))
           (hsPkgs."bcc-binary" or (errorHandler.buildDepError "bcc-binary"))
           (hsPkgs."bcc-crypto-class" or (errorHandler.buildDepError "bcc-crypto-class"))
-          (hsPkgs."bcc-crypto-praos" or (errorHandler.buildDepError "bcc-crypto-praos"))
+          (hsPkgs."bcc-crypto-optimum" or (errorHandler.buildDepError "bcc-crypto-optimum"))
           (hsPkgs."bcc-crypto-wrapper" or (errorHandler.buildDepError "bcc-crypto-wrapper"))
           (hsPkgs."bcc-ledger-cole" or (errorHandler.buildDepError "bcc-ledger-cole"))
           (hsPkgs."bcc-prelude" or (errorHandler.buildDepError "bcc-prelude"))

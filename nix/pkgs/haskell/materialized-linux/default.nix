@@ -754,7 +754,7 @@
         small-steps = ./.plan.nix/small-steps.nix;
         cole-spec-ledger = ./.plan.nix/cole-spec-ledger.nix;
         cole-spec-chain = ./.plan.nix/cole-spec-chain.nix;
-        bcc-crypto-praos = ./.plan.nix/bcc-crypto-praos.nix;
+        bcc-crypto-optimum = ./.plan.nix/bcc-crypto-optimum.nix;
         monoidal-synchronisation = ./.plan.nix/monoidal-synchronisation.nix;
         bcc-binary-test = ./.plan.nix/bcc-binary-test.nix;
         zerepoch-core = ./.plan.nix/zerepoch-core.nix;
@@ -895,7 +895,7 @@
           "cole-spec-chain" = {
             flags = { "development" = lib.mkOverride 900 false; };
             };
-          "bcc-crypto-praos" = {
+          "bcc-crypto-optimum" = {
             flags = {
               "development" = lib.mkOverride 900 false;
               "external-libsodium-vrf" = lib.mkOverride 900 true;
@@ -1540,7 +1540,7 @@
           "cole-spec-chain".components.library.planned = lib.mkOverride 900 true;
           "cole-spec-ledger".components.library.planned = lib.mkOverride 900 true;
           "zerepoch-core".components.exes."plc".planned = lib.mkOverride 900 true;
-          "bcc-crypto-praos".components.library.planned = lib.mkOverride 900 true;
+          "bcc-crypto-optimum".components.library.planned = lib.mkOverride 900 true;
           "th-extras".components.library.planned = lib.mkOverride 900 true;
           "quickcheck-io".components.library.planned = lib.mkOverride 900 true;
           "zerepoch-benchmark".components.benchmarks."nofib".planned = lib.mkOverride 900 true;

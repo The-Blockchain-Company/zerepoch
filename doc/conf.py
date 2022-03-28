@@ -11,7 +11,7 @@ from os.path import abspath, join, dirname
 sys.path.insert(0, abspath(join(dirname(__file__))))
 sys.path.append(os.path.abspath('exts'))
 
-# -- Doc config values
+# -- Doc config values #TODO
 simeon_playground_url = "https://alpha.simeon.tbcodev.io/"
 zerepoch_playground_url = "https://alpha.zerepoch.tbcodev.io/"
 

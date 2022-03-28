@@ -116,7 +116,7 @@ extra-deps:
     - orphans-deriving-via
     - slotting
     - bcc-crypto-class
-    - bcc-crypto-praos
+    - bcc-crypto-optimum
     - bcc-crypto-tests
     - strict-containers
 - git: https://github.com/The-Blockchain-Company/bcc-ledger-specs
