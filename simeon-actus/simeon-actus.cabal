@@ -6,7 +6,7 @@ license-files:
   LICENSE
   NOTICE
 build-type: Simple
-maintainer: dmytro.kondratiuk@bcccoin.io
+maintainer: dmytro.kondratiuk@blockchain-company.io
 stability: experimental
 author: Dmytro Kondratiuk
 synopsis:

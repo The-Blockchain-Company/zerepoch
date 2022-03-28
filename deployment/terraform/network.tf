@@ -241,7 +241,7 @@ resource "aws_route53_record" "simeon_finance_play" {
   name    = "play.simeon-finance.io"
   type    = "CNAME"
   ttl     = 300
-  records = ["production.simeon.bcccoindev.io"]
+  records = ["production.simeon.tbcodev.io"]
 }
 
 resource "aws_route53_record" "simeon_finance_run" {
@@ -250,7 +250,7 @@ resource "aws_route53_record" "simeon_finance_run" {
   name    = "run.simeon-finance.io"
   type    = "CNAME"
   ttl     = 300
-  records = ["production.simeon-dash.bcccoindev.io"]
+  records = ["production.simeon-dash.tbcodev.io"]
 }
 
 resource "aws_route53_record" "simeon_finance_webinar" {

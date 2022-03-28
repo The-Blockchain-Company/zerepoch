@@ -70,7 +70,7 @@ On-chain oracles
 
 The pattern could also be a building block for on-chain oracles.
 
-Let's say we have a crypto-backed stablecoin, not too dissimilar to `Djed <https://bcccoin.io/en/blog/posts/2021/08/18/djed-implementing-algorithmic-stablecoins-for-proven-price-stability/>`_, that relies on recent quotes of the exchange rate between Bcc and PEAR tokens.
+Let's say we have a crypto-backed stablecoin, not too dissimilar to `Djed <https://blockchain-company.io/en/blog/posts/2021/08/18/djed-implementing-algorithmic-stablecoins-for-proven-price-stability/>`_, that relies on recent quotes of the exchange rate between Bcc and PEAR tokens.
 And we have a DEX like the one described above where Bcc and PEAR are actively traded.
 Every order fulfilled on the DEX gives us a snapshot of the exchange rate at that time.
 Example 1 from above would result in "15.00 BCC / PEAR" (using the buy price here but that's just a technicality).

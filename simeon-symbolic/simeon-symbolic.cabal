@@ -3,7 +3,7 @@ version:                0.3.0.0
 license:                BSD3
 license-file:           LICENSE
 author:                 Alexander Nemish
-maintainer:             alexander.nemish@bcccoin.io
+maintainer:             alexander.nemish@blockchain-company.io
 build-type:             Simple
 extra-source-files:     README.md
 cabal-version:          >= 1.10

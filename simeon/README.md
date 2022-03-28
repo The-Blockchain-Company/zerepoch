@@ -5,5 +5,5 @@ the execution of financial contracts in the style of Peyton Jones et al
 on Bcc Computation Layer.
 
 The implementation is based on semantics described in paper
-['Simeon: financial contracts on blockchain'](https://bcccoin.io/research/papers/#2WHKDRA8)
+['Simeon: financial contracts on blockchain'](https://blockchain-company.io/research/papers/#2WHKDRA8)
 by Simon Thompson and Pablo Lamela Seijas

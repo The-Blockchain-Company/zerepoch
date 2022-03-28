@@ -14,7 +14,7 @@
 -- Copyright   : [2018] The Blockchain Co.
 -- License     : MIT
 --
--- Maintainer  : Manuel M T Chakravarty <manuel.chakravarty@bcccoin.io>
+-- Maintainer  : Manuel M T Chakravarty <manuel.chakravarty@blockchain-company.io>
 -- Stability   : experimental
 --
 -- UTxO model definition

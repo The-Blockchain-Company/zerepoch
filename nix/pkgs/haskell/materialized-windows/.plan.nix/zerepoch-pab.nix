@@ -14,9 +14,9 @@
       identifier = { name = "zerepoch-pab"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "jann.mueller@bcccoin.io";
+      maintainer = "jann.mueller@blockchain-company.io";
       author = "Jann Müller";
-      homepage = "https://github.com/bcccoin/zerepoch#readme";
+      homepage = "https://github.com/tbco/zerepoch#readme";
       url = "";
       synopsis = "";
       description = "Please see the README on GitHub at <https://github.com/The-Blockchain-Company/zerepoch#readme>";
@@ -110,7 +110,7 @@
           (hsPkgs."mwc-random" or (errorHandler.buildDepError "mwc-random"))
           (hsPkgs."primitive" or (errorHandler.buildDepError "primitive"))
           (hsPkgs."hedgehog" or (errorHandler.buildDepError "hedgehog"))
-          (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+          (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
           (hsPkgs."lobemo-backend-ekg" or (errorHandler.buildDepError "lobemo-backend-ekg"))
           (hsPkgs."exceptions" or (errorHandler.buildDepError "exceptions"))
           (hsPkgs."data-default" or (errorHandler.buildDepError "data-default"))
@@ -205,7 +205,7 @@
             (hsPkgs."filepath" or (errorHandler.buildDepError "filepath"))
             (hsPkgs."freer-extras" or (errorHandler.buildDepError "freer-extras"))
             (hsPkgs."freer-simple" or (errorHandler.buildDepError "freer-simple"))
-            (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+            (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
             (hsPkgs."lens" or (errorHandler.buildDepError "lens"))
             (hsPkgs."lobemo-backend-ekg" or (errorHandler.buildDepError "lobemo-backend-ekg"))
             (hsPkgs."monad-logger" or (errorHandler.buildDepError "monad-logger"))
@@ -452,7 +452,7 @@
             (hsPkgs."zerepoch-tx" or (errorHandler.buildDepError "zerepoch-tx"))
             (hsPkgs."playground-common" or (errorHandler.buildDepError "playground-common"))
             (hsPkgs."yaml" or (errorHandler.buildDepError "yaml"))
-            (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+            (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
             (hsPkgs."servant-server" or (errorHandler.buildDepError "servant-server"))
             (hsPkgs."purescript-bridge" or (errorHandler.buildDepError "purescript-bridge"))
             (hsPkgs."async" or (errorHandler.buildDepError "async"))
@@ -508,7 +508,7 @@
             (hsPkgs."zerepoch-tx" or (errorHandler.buildDepError "zerepoch-tx"))
             (hsPkgs."playground-common" or (errorHandler.buildDepError "playground-common"))
             (hsPkgs."yaml" or (errorHandler.buildDepError "yaml"))
-            (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+            (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
             (hsPkgs."servant-server" or (errorHandler.buildDepError "servant-server"))
             (hsPkgs."purescript-bridge" or (errorHandler.buildDepError "purescript-bridge"))
             (hsPkgs."async" or (errorHandler.buildDepError "async"))

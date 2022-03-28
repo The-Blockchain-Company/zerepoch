@@ -12,8 +12,8 @@ sys.path.insert(0, abspath(join(dirname(__file__))))
 sys.path.append(os.path.abspath('exts'))
 
 # -- Doc config values
-simeon_playground_url = "https://alpha.simeon.bcccoindev.io/"
-zerepoch_playground_url = "https://alpha.zerepoch.bcccoindev.io/"
+simeon_playground_url = "https://alpha.simeon.tbcodev.io/"
+zerepoch_playground_url = "https://alpha.zerepoch.tbcodev.io/"
 
 rst_epilog = """
 .. _Zerepoch Playground: {0}

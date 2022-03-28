@@ -14,9 +14,9 @@
       identifier = { name = "zerepoch-chain-index"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "sjoerd.visscher@bcccoin.io";
+      maintainer = "sjoerd.visscher@blockchain-company.io";
       author = "Sjoerd Visscher";
-      homepage = "https://github.com/bcccoin/zerepoch#readme";
+      homepage = "https://github.com/tbco/zerepoch#readme";
       url = "";
       synopsis = "";
       description = "Please see the README on GitHub at <https://github.com/The-Blockchain-Company/zerepoch#readme>";
@@ -55,7 +55,7 @@
           (hsPkgs."fingertree" or (errorHandler.buildDepError "fingertree"))
           (hsPkgs."freer-simple" or (errorHandler.buildDepError "freer-simple"))
           (hsPkgs."io-classes" or (errorHandler.buildDepError "io-classes"))
-          (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+          (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
           (hsPkgs."lens" or (errorHandler.buildDepError "lens"))
           (hsPkgs."memory" or (errorHandler.buildDepError "memory"))
           (hsPkgs."nothunks" or (errorHandler.buildDepError "nothunks"))
@@ -118,7 +118,7 @@
             (hsPkgs."shardagnostic-network" or (errorHandler.buildDepError "shardagnostic-network"))
             (hsPkgs."zerepoch-chain-index" or (errorHandler.buildDepError "zerepoch-chain-index"))
             (hsPkgs."zerepoch-ledger" or (errorHandler.buildDepError "zerepoch-ledger"))
-            (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+            (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
             (hsPkgs."yaml" or (errorHandler.buildDepError "yaml"))
             (hsPkgs."prettyprinter" or (errorHandler.buildDepError "prettyprinter"))
             (hsPkgs."zerepoch-chain-index" or (errorHandler.buildDepError "zerepoch-chain-index"))

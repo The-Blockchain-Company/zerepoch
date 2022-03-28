@@ -14,9 +14,9 @@
       identifier = { name = "zerepoch-benchmark"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "radu.ometita@bcccoin.io";
+      maintainer = "radu.ometita@blockchain-company.io";
       author = "Radu Ometita";
-      homepage = "https://github.com/bcccoin/zerepoch#readme";
+      homepage = "https://github.com/tbco/zerepoch#readme";
       url = "";
       synopsis = "";
       description = "Please see the README on GitHub at <https://github.com/The-Blockchain-Company/zerepoch#readme>";

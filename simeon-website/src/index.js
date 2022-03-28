@@ -143,8 +143,8 @@ function fixCrossLinks() {
   }
 
   const urls = {
-    run: "https://" + env + ".simeon-dash.bcccoindev.io",
-    play: "https://" + env + ".simeon.bcccoindev.io",
+    run: "https://" + env + ".simeon-dash.tbcodev.io",
+    play: "https://" + env + ".simeon.tbcodev.io",
   };
 
   const crossLinks = document.querySelectorAll("a[data-simeon-component]");

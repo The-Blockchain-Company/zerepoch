@@ -14,7 +14,7 @@
       identifier = { name = "simeon-actus"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "dmytro.kondratiuk@bcccoin.io";
+      maintainer = "dmytro.kondratiuk@blockchain-company.io";
       author = "Dmytro Kondratiuk";
       homepage = "";
       url = "";

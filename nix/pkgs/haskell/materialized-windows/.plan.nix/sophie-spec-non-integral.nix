@@ -14,7 +14,7 @@
       identifier = { name = "sophie-spec-non-integral"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "formal.methods@bcccoin.io";
+      maintainer = "dev@blockchain-company.io";
       author = "The Blockchain Co. Formal Methods Team";
       homepage = "";
       url = "";

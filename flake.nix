@@ -64,9 +64,9 @@
 
       flake = false;
     };
-    bcccoin-nix = {
+    tbco-nix = {
       # We pin this revision to avoid unhelpful frequent churn from the auto-update process.
-      url = "github:The-Blockchain-Company/bcccoin-nix?rev=cbd497f5844249ef8fe617166337d59f2a6ebe90";
+      url = "github:The-Blockchain-Company/tbco-nix?rev=cbd497f5844249ef8fe617166337d59f2a6ebe90";
 
       flake = false;
     };

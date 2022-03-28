@@ -13,8 +13,8 @@ let
     webghcA.dns = "webghc-a";
     webghcB.dns = "webghc-b";
     environment = "alpha";
-    zerepochTld = "zerepoch.bcccoindev.io";
-    simeonTld = "simeon.bcccoindev.io";
+    zerepochTld = "zerepoch.tbcodev.io";
+    simeonTld = "simeon.tbcodev.io";
   };
 
   # Fake `deployment` option definition so `pkgs.nixos` does not

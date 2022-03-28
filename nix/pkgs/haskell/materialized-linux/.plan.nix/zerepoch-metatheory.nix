@@ -14,7 +14,7 @@
       identifier = { name = "zerepoch-metatheory"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "james.chapman@bcccoin.io";
+      maintainer = "james.chapman@blockchain-company.io";
       author = "James Chapman";
       homepage = "https://github.com/The-Blockchain-Company/zerepoch";
       url = "";

@@ -9,11 +9,11 @@
   # initial morph deployment cannot substitute anything causing
   # everything to be uploaded from the deployer machine
   nix = {
-    binaryCaches = [ https://hydra.bcccoin.io https://cache.nixos.org ];
+    binaryCaches = [ https://hydra.blockchain-company.io https://cache.nixos.org ];
     requireSignedBinaryCaches = false;
-    trustedBinaryCaches = [ https://hydra.bcccoin.io ];
+    trustedBinaryCaches = [ https://hydra.blockchain-company.io ];
     binaryCachePublicKeys = [
-      "hydra.bcccoin.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+      "hydra.blockchain-company.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
     ];
   };

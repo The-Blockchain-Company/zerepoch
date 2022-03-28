@@ -3,7 +3,7 @@ name: zerepoch-use-cases
 version: 0.1.0.0
 license: Apache-2.0
 license-file: LICENSE NOTICE
-maintainer: jann.mueller@bcccoin.io
+maintainer: jann.mueller@blockchain-company.io
 author: Manuel M T Chakravarty, Jann Müller
 stability: experimental
 synopsis: Collection of smart contracts to develop the zerepoch/wallet interface

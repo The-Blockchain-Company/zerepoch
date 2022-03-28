@@ -14,7 +14,7 @@
       identifier = { name = "bcc-node"; version = "1.99.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "The Blockchain Co.";
       homepage = "";
       url = "";
@@ -61,7 +61,7 @@
           (hsPkgs."hostname" or (errorHandler.buildDepError "hostname"))
           (hsPkgs."iproute" or (errorHandler.buildDepError "iproute"))
           (hsPkgs."io-classes" or (errorHandler.buildDepError "io-classes"))
-          (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+          (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
           (hsPkgs."lobemo-backend-aggregation" or (errorHandler.buildDepError "lobemo-backend-aggregation"))
           (hsPkgs."lobemo-backend-ekg" or (errorHandler.buildDepError "lobemo-backend-ekg"))
           (hsPkgs."lobemo-backend-monitoring" or (errorHandler.buildDepError "lobemo-backend-monitoring"))

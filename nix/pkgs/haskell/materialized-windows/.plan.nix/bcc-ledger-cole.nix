@@ -14,7 +14,7 @@
       identifier = { name = "bcc-ledger-cole"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "2018 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "The Blockchain Co.";
       homepage = "";
       url = "";

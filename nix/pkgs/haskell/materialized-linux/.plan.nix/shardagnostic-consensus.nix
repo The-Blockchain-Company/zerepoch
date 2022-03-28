@@ -14,7 +14,7 @@
       identifier = { name = "shardagnostic-consensus"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "2021 The-Blockchain-Company ";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "The Blockchain Co. Engineering Team";
       homepage = "";
       url = "";

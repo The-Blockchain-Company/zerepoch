@@ -14,9 +14,9 @@
       identifier = { name = "lobemo-backend-monitoring"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "2019 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "Alexander Diemand";
-      homepage = "https://github.com/The-Blockchain-Company/bcccoin-monitoring-framework";
+      homepage = "https://github.com/The-Blockchain-Company/tbco-monitoring-framework";
       url = "";
       synopsis = "provides a backend implementation for monitoring";
       description = "";
@@ -34,7 +34,7 @@
       "library" = {
         depends = [
           (hsPkgs."base" or (errorHandler.buildDepError "base"))
-          (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+          (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
           (hsPkgs."aeson" or (errorHandler.buildDepError "aeson"))
           (hsPkgs."async" or (errorHandler.buildDepError "async"))
           (hsPkgs."safe-exceptions" or (errorHandler.buildDepError "safe-exceptions"))
@@ -54,7 +54,7 @@
           depends = [
             (hsPkgs."base" or (errorHandler.buildDepError "base"))
             (hsPkgs."contra-tracer" or (errorHandler.buildDepError "contra-tracer"))
-            (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+            (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
             (hsPkgs."lobemo-backend-monitoring" or (errorHandler.buildDepError "lobemo-backend-monitoring"))
             (hsPkgs."aeson" or (errorHandler.buildDepError "aeson"))
             (hsPkgs."array" or (errorHandler.buildDepError "array"))

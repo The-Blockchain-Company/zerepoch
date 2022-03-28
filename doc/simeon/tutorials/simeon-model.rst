@@ -221,4 +221,4 @@ abstract away from transaction grouping, since the grouping does not affect the 
 .. [4]
    In our paper `Simeon: implementing and analysing financial contracts
    on
-   blockchain <https://bcccoin.io/en/research/library/papers/simeonimplementing-and-analysing-financial-contracts-on-blockchain/>`_
+   blockchain <https://blockchain-company.io/en/research/library/papers/simeonimplementing-and-analysing-financial-contracts-on-blockchain/>`_

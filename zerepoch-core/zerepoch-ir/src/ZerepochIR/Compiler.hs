@@ -195,7 +195,7 @@ compileReadableToPlc =
     >=> through check
     -- NOTE: There was a bug in renamer handling non-rec terms, so we need to
     -- rename again.
-    -- https://jira.bcccoin.io/browse/SCP-2156
+    -- https://jira.blockchain-company.io/browse/SCP-2156
     >=> (<$ logVerbose "  !!! removeDeadBindings")
     >=> DeadCode.removeDeadBindings
     >=> (<$ logVerbose "  !!! simplifyTerm")

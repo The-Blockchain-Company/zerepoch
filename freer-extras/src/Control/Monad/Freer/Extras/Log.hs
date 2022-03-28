@@ -79,7 +79,7 @@ import           GHC.Generics                            (Generic)
 {- Note [Logging and Tracing]
 
 This module provides two effects for structured logging, implementing a
-'freer-simple' version of https://github.com/The-Blockchain-Company/bcccoin-monitoring-framework/tree/master/contra-tracer.
+'freer-simple' version of https://github.com/The-Blockchain-Company/tbco-monitoring-framework/tree/master/contra-tracer.
 
 * 'LogMsg' and its handlers correspond to 'Control.Tracer'
 * 'LogObserve' and its handler correspond to 'Control.Tracer.Observe'

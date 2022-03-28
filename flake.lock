@@ -131,19 +131,19 @@
         "type": "github"
       }
     },
-    "bcccoin-nix": {
+    "tbco-nix": {
       "flake": false,
       "locked": {
         "lastModified": 1626953580,
         "narHash": "sha256-iEI9aTOaZMGsjWzcrctrC0usmiagwKT2v1LSDe9/tMU=",
         "owner": "The-Blockchain-Company",
-        "repo": "bcccoin-nix",
+        "repo": "tbco-nix",
         "rev": "cbd497f5844249ef8fe617166337d59f2a6ebe90",
         "type": "github"
       },
       "original": {
         "owner": "The-Blockchain-Company",
-        "repo": "bcccoin-nix",
+        "repo": "tbco-nix",
         "rev": "cbd497f5844249ef8fe617166337d59f2a6ebe90",
         "type": "github"
       }
@@ -208,7 +208,7 @@
         "hackage-nix": "hackage-nix",
         "haskell-language-server": "haskell-language-server",
         "haskell-nix": "haskell-nix",
-        "bcccoin-nix": "bcccoin-nix",
+        "tbco-nix": "tbco-nix",
         "nixpkgs": "nixpkgs",
         "npmlock2nix": "npmlock2nix",
         "pre-commit-hooks-nix": "pre-commit-hooks-nix",

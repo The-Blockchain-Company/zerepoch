@@ -113,8 +113,8 @@ You can run the following command (from the repository root) to build the client
 
 ```sh
 $ nix-build \
-  --option trusted-public-keys "hydra.bcccoin.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" \
-  --option substituters https://hydra.bcccoin.io \
+  --option trusted-public-keys "hydra.blockchain-company.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" \
+  --option substituters https://hydra.blockchain-company.io \
   -A simeon-dashboard.client -A simeon-dashboard.simeon-invoker
 ```
 

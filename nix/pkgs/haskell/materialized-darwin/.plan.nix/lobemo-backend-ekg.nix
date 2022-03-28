@@ -14,9 +14,9 @@
       identifier = { name = "lobemo-backend-ekg"; version = "0.1.0.1"; };
       license = "Apache-2.0";
       copyright = "2019 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "Alexander Diemand";
-      homepage = "https://github.com/The-Blockchain-Company/bcccoin-monitoring-framework";
+      homepage = "https://github.com/The-Blockchain-Company/tbco-monitoring-framework";
       url = "";
       synopsis = "provides a backend implementation to EKG";
       description = "";
@@ -39,7 +39,7 @@
           (hsPkgs."bytestring" or (errorHandler.buildDepError "bytestring"))
           (hsPkgs."ekg" or (errorHandler.buildDepError "ekg"))
           (hsPkgs."ekg-core" or (errorHandler.buildDepError "ekg-core"))
-          (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+          (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
           (hsPkgs."safe-exceptions" or (errorHandler.buildDepError "safe-exceptions"))
           (hsPkgs."snap-core" or (errorHandler.buildDepError "snap-core"))
           (hsPkgs."snap-server" or (errorHandler.buildDepError "snap-server"))

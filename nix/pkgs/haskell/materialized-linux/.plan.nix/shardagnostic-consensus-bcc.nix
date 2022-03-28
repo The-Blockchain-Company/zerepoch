@@ -17,7 +17,7 @@
         };
       license = "Apache-2.0";
       copyright = "2021 The-Blockchain-Company ";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "The Blockchain Co. Engineering Team";
       homepage = "";
       url = "";

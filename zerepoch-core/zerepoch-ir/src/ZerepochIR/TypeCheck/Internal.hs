@@ -54,7 +54,7 @@ See Note [Notation] of ZerepochCore.TypeCheck.Internal for the notation of infer
 -}
 
 {- Note [PIR vs Paper Syntax Difference]
-Link to the paper: <https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.papers.unraveling-recursion/latest/download-by-type/doc-pdf/unraveling-recursion>
+Link to the paper: <https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.papers.unraveling-recursion/latest/download-by-type/doc-pdf/unraveling-recursion>
 FIR's syntax requires that the data-constructor is annotated with a *list of its argument types* (domain),
 instead of requiring a single valid type T (usually in the form `dataconstr : arg1 -> arg2 ->... argn`)
 The codomain is also left out of the syntax and implied to be of the type `[TypeCons tyarg1 tyarg2 ... tyargn]`
@@ -72,7 +72,7 @@ See NOTE [Normalization of data-constructors' types] at ZerepochIR.Compiler.Data
 -}
 
 {- Note [PIR vs Paper Escaping Types Difference]
-Link to the paper: <https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.papers.unraveling-recursion/latest/download-by-type/doc-pdf/unraveling-recursion>
+Link to the paper: <https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.papers.unraveling-recursion/latest/download-by-type/doc-pdf/unraveling-recursion>
 In FIR paper's Fig.6, T-Let and T-LetRec rules dictate that: Gamma !- inTerm :: * for two reasons:
 1. check (locally) that the kind of the in-term's inferred type is indeed *
 2. ensure that the inferred type does not escaping its scope (hence Gamma)

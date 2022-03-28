@@ -14,7 +14,7 @@
       identifier = { name = "small-steps-test"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "formal.methods@bcccoin.io";
+      maintainer = "dev@blockchain-company.io";
       author = "The Blockchain Co. Formal Methods Team";
       homepage = "https://github.com/The-Blockchain-Company/bcc-legder-specs";
       url = "";

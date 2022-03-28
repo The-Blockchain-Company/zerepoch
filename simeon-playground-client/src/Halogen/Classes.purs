@@ -28,7 +28,7 @@ foreign import blocklyIconColour :: String
 
 foreign import readMoreIconWhite :: String
 
-foreign import bcccoinIcon :: String
+foreign import tbcoIcon :: String
 
 foreign import simulationIcon :: String
 
@@ -42,7 +42,7 @@ foreign import greyCircle :: String
 
 foreign import selectButton :: String
 
-foreign import bcccoinLogo :: String
+foreign import tbcoLogo :: String
 
 foreign import haskellIcon :: String
 

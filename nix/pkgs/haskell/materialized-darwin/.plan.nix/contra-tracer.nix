@@ -14,7 +14,7 @@
       identifier = { name = "contra-tracer"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "2019 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "Neil Davies, Alexander Diemand, Andreas Triantafyllos";
       homepage = "";
       url = "";

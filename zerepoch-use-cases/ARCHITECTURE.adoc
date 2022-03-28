@@ -35,10 +35,10 @@ The tool is run during CI and the result is available for download from Hydra. F
 
 ```
 # Scripts output:
-https://hydra.bcccoin.io/build/<BUILD_ID>/download/1/zerepoch-use-cases-scripts-output/scripts/<SCRIPT_NAME>.flat
+https://hydra.blockchain-company.io/build/<BUILD_ID>/download/1/zerepoch-use-cases-scripts-output/scripts/<SCRIPT_NAME>.flat
 
 # Partial transactions output:
-https://hydra.bcccoin.io/build/<BUILD_ID>/download/1/zerepoch-use-cases-scripts-output/transactions/<SCRIPT_NAME>(.cbor|.json)
+https://hydra.blockchain-company.io/build/<BUILD_ID>/download/1/zerepoch-use-cases-scripts-output/transactions/<SCRIPT_NAME>(.cbor|.json)
 ```
 
 For the possible script names, see `zerepoch-use-cases/scripts/Main.hs`.

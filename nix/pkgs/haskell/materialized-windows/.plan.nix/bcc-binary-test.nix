@@ -14,7 +14,7 @@
       identifier = { name = "bcc-binary-test"; version = "1.3.0"; };
       license = "MIT";
       copyright = "2019-2021 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "The Blockchain Co.";
       homepage = "";
       url = "";

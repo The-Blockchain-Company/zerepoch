@@ -118,7 +118,7 @@ useWalletBox state =
           [ classNames [ "mt-6", "flex", "justify-between" ] ]
           [ a
               [ classNames [ "flex", "font-bold" ]
-              , href "https://staging.simeon-web.bcccoindev.io"
+              , href "https://staging.simeon-web.tbcodev.io"
               ]
               [ icon_ Icon.Previous
               , text "Back to home page"

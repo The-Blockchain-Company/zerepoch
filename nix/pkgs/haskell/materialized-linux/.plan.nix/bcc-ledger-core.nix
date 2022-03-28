@@ -14,7 +14,7 @@
       identifier = { name = "bcc-ledger-core"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "2021 The-Blockchain-Company ";
-      maintainer = "formal.methods@bcccoin.io";
+      maintainer = "dev@blockchain-company.io";
       author = "The Blockchain Co. Formal Methods Team";
       homepage = "";
       url = "";

@@ -14,4 +14,4 @@ simeon:
   # The API Gateway url to trigger the simeon symbolic lambda
   symbolic-url: "https://some-aws-api-gateway-url"
   api-key: "the_aws_api_gateway_key"
-  callback-url: "https://david.simeon.bcccoindev.io/machine-a/api"
+  callback-url: "https://david.simeon.tbcodev.io/machine-a/api"

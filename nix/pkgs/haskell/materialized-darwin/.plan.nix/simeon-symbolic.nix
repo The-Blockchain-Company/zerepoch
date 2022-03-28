@@ -14,7 +14,7 @@
       identifier = { name = "simeon-symbolic"; version = "0.3.0.0"; };
       license = "BSD-3-Clause";
       copyright = "";
-      maintainer = "alexander.nemish@bcccoin.io";
+      maintainer = "alexander.nemish@blockchain-company.io";
       author = "Alexander Nemish";
       homepage = "";
       url = "";

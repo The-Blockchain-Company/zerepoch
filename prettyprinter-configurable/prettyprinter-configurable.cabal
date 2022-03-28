@@ -7,7 +7,7 @@ license-files:
   LICENSE
   NOTICE
 author:              David Luposchainsky, effectfully
-maintainer:          zerepoch@bcccoin.io
+maintainer:          zerepoch@blockchain-company.io
 category:            User Interfaces, Text
 build-type:          Custom
 extra-source-files:  README.md

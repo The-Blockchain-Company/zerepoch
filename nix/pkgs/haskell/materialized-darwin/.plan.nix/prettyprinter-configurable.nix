@@ -17,7 +17,7 @@
         };
       license = "NONE";
       copyright = "";
-      maintainer = "zerepoch@bcccoin.io";
+      maintainer = "zerepoch@blockchain-company.io";
       author = "David Luposchainsky, effectfully";
       homepage = "";
       url = "";

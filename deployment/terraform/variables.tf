@@ -7,7 +7,7 @@ variable "output_path" {
 }
 
 variable "zerepoch_tld" {
-  default = "zerepoch.bcccoindev.io"
+  default = "zerepoch.tbcodev.io"
 }
 
 variable "zerepoch_full_domain" {
@@ -19,7 +19,7 @@ variable "zerepoch_public_zone" {
 }
 
 variable "simeon_tld" {
-  default = "simeon.bcccoindev.io"
+  default = "simeon.tbcodev.io"
 }
 
 variable "simeon_full_domain" {
@@ -31,7 +31,7 @@ variable "simeon_public_zone" {
 }
 
 variable "simeon_dash_tld" {
-  default = "simeon-dash.bcccoindev.io"
+  default = "simeon-dash.tbcodev.io"
 }
 
 variable "simeon_web_public_zone" {
@@ -39,7 +39,7 @@ variable "simeon_web_public_zone" {
 }
 
 variable "simeon_web_tld" {
-  default = "simeon-web.bcccoindev.io"
+  default = "simeon-web.tbcodev.io"
 }
 
 variable "simeon_dash_public_zone" {
@@ -78,7 +78,7 @@ variable "private_subnet_cidrs" {
   default = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
 }
 
-# The public ip address of production.simeon.bcccoindev.io which
+# The public ip address of production.simeon.tbcodev.io which
 # is used to create a route53 A record for simeon-finance.io.
 variable "simeon_finance_production_ip" {
   default = "52.213.243.4"

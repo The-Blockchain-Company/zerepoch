@@ -14,7 +14,7 @@
       identifier = { name = "simeon"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "alexander.nemish@bcccoin.io";
+      maintainer = "alexander.nemish@blockchain-company.io";
       author = "Alexander Nemish";
       homepage = "";
       url = "";

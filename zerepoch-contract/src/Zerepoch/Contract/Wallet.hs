@@ -162,7 +162,7 @@ mkSignatories =
 The wallet backend (receiver of 'ExportTx' values) expectes the public keys in the
 'signatories' field to be 'Bcc.Crypto.Wallet.XPub' keys - extended public keys
 of 64 bytes. In the emulator we only deal with ED25519 keys of 32 bytes. Until that
-is changed (https://jira.bcccoin.io/browse/SCP-2644) we simply append each of our keys
+is changed (https://jira.blockchain-company.io/browse/SCP-2644) we simply append each of our keys
 to itself in order to get a key of the correct length.
 
 -}

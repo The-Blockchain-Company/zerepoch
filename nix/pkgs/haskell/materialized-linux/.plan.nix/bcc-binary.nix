@@ -14,7 +14,7 @@
       identifier = { name = "bcc-binary"; version = "1.5.0"; };
       license = "Apache-2.0";
       copyright = "2019-2021 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "The Blockchain Co.";
       homepage = "";
       url = "";

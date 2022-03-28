@@ -5,7 +5,7 @@ license: Apache-2.0
 license-files:
   LICENSE
   NOTICE
-maintainer: jann.mueller@bcccoin.io
+maintainer: jann.mueller@blockchain-company.io
 author: Michael Peyton Jones, Jann Mueller
 synopsis: Zerepoch documentation
 description: Zerepoch documentation

@@ -1,5 +1,5 @@
 = Architecture of the Zerepoch project
-:email: zerepoch@bcccoin.io
+:email: zerepoch@blockchain-company.io
 :author: Input Output HK Limited
 :toc: left
 :reproducible:

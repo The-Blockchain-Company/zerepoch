@@ -1,5 +1,5 @@
 = https://github.com/The-Blockchain-Company/zerepoch[The Zerepoch Platform and Simeon]
-:email: zerepoch@bcccoin.io
+:email: zerepoch@blockchain-company.io
 :author: Input Output HK Limited
 :toc: left
 :reproducible:
@@ -33,7 +33,7 @@ For people who want to *use* the Platform, please consult the <<user-documentati
 ====
 DO NOT IGNORE THIS
 
-If you want to use Nix with this project, make sure to set up the xref:bcccoin-binary-cache[The Blockchain Co. binary cache].
+If you want to use Nix with this project, make sure to set up the xref:tbco-binary-cache[The Blockchain Co. binary cache].
 If you do not do this, you will end up building GHC, which takes several hours.
 If you find yourself building GHC, STOP and fix the cache.
 ====
@@ -51,17 +51,17 @@ The main documentation is located https://zerepoch.readthedocs.io/en/latest/[her
 
 === Specifications and design
 
-- https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.docs.zerepoch-report/latest/download-by-type/doc-pdf/zerepoch[Zerepoch Technical Report] (draft)
-- https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.docs.zerepoch-core-spec/latest/download-by-type/doc-pdf/zerepoch-core-specification[Zerepoch Core Specification]
-- https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.docs.extended-utxo-spec/latest/download-by-type/doc-pdf/extended-utxo-specification[Extended UTXO Model]
+- https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.docs.zerepoch-report/latest/download-by-type/doc-pdf/zerepoch[Zerepoch Technical Report] (draft)
+- https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.docs.zerepoch-core-spec/latest/download-by-type/doc-pdf/zerepoch-core-specification[Zerepoch Core Specification]
+- https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.docs.extended-utxo-spec/latest/download-by-type/doc-pdf/extended-utxo-specification[Extended UTXO Model]
 
 === Academic papers
 
-- https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.docs.papers.unraveling-recursion/latest/download-by-type/doc-pdf/unraveling-recursion[Unraveling Recursion] (https://doi.org/10.1007/978-3-030-33636-3_15[published version])
-- https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.docs.papers.system-f-in-agda/latest/download-by-type/doc-pdf/paper[System F in Agda] (https://doi.org/10.1007/978-3-030-33636-3_10[published version])
-- https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.docs.papers.eutxo/latest/download-by-type/doc-pdf/eutxo[The Extended UTXO Model] (in press)
-- https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.docs.papers.utxoma/latest/download-by-type/doc-pdf/utxoma[UTXOma: UTXO with Multi-Asset Support] (in press)
-- https://hydra.bcccoin.io/job/Bcc/zerepoch/linux.docs.papers.eutxoma/latest/download-by-type/doc-pdf/eutxoma[Native Custom Tokens in the Extended UTXO Model] (in press)
+- https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.docs.papers.unraveling-recursion/latest/download-by-type/doc-pdf/unraveling-recursion[Unraveling Recursion] (https://doi.org/10.1007/978-3-030-33636-3_15[published version])
+- https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.docs.papers.system-f-in-agda/latest/download-by-type/doc-pdf/paper[System F in Agda] (https://doi.org/10.1007/978-3-030-33636-3_10[published version])
+- https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.docs.papers.eutxo/latest/download-by-type/doc-pdf/eutxo[The Extended UTXO Model] (in press)
+- https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.docs.papers.utxoma/latest/download-by-type/doc-pdf/utxoma[UTXOma: UTXO with Multi-Asset Support] (in press)
+- https://hydra.blockchain-company.io/job/Bcc/zerepoch/linux.docs.papers.eutxoma/latest/download-by-type/doc-pdf/eutxoma[Native Custom Tokens in the Extended UTXO Model] (in press)
 
 == Working with the project
 
@@ -142,7 +142,7 @@ See the link:./cabal.project[cabal project file] to see the other packages that 
 [[nix-advice]]
 == Nix
 
-[[bcccoin-binary-cache]]
+[[tbco-binary-cache]]
 === How to set up the The Blockchain Co. binary caches
 
 Adding the The Blockchain Co. binary cache to your Nix configuration will speed up
@@ -157,8 +157,8 @@ To set up the cache:
 . On non-NixOS, edit `/etc/nix/nix.conf` and add the following lines:
 +
 ----
-substituters        = https://hydra.bcccoin.io https://bcccoin.cachix.org https://cache.nixos.org/
-trusted-public-keys = hydra.bcccoin.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= bcccoin.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+substituters        = https://hydra.blockchain-company.io https://tbco.cachix.org https://cache.nixos.org/
+trusted-public-keys = hydra.blockchain-company.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= tbco.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
 ----
 +
 [NOTE]
@@ -170,8 +170,8 @@ You must be a https://nixos.org/nix/manual/#ssec-multi-user[trusted user] to do 
 +
 ----
 nix = {
-  binaryCaches          = [ "https://hydra.bcccoin.io" "https://bcccoin.cachix.org" ];
-  binaryCachePublicKeys = [ "hydra.bcccoin.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" "bcccoin.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo=" ];
+  binaryCaches          = [ "https://hydra.blockchain-company.io" "https://tbco.cachix.org" ];
+  binaryCachePublicKeys = [ "hydra.blockchain-company.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" "tbco.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo=" ];
 };
 ----
 
@@ -180,7 +180,7 @@ nix = {
 
 Nix on macOS can be a bit tricky. In particular, sandboxing is disabled by default, which can lead to strange failures.
 
-These days it should be safe to turn on sandboxing on macOS with a few exceptions. Consider setting the following Nix settings, in the same way as in xref:bcccoin-binary-cache[previous section]:
+These days it should be safe to turn on sandboxing on macOS with a few exceptions. Consider setting the following Nix settings, in the same way as in xref:tbco-binary-cache[previous section]:
 
 ----
 sandbox = true

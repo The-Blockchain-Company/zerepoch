@@ -97,7 +97,7 @@ render state =
       , footer [ classNames [ "flex", "justify-between", "px-medium", "py-small", "bg-gray-dark", "font-semibold" ] ]
           [ div [ classNames [ "flex" ] ]
               [ a [ href "https://bcc.org/", target "_blank", classNames [ "pr-small" ] ] [ text "bcc.org" ]
-              , a [ href "https://bcccoin.io/", target "_blank", classNames [ "pl-small" ] ] [ text "bcccoin.io" ]
+              , a [ href "https://blockchain-company.io/", target "_blank", classNames [ "pl-small" ] ] [ text "blockchain-company.io" ]
               ]
           , div_ [ text (copyright <> " 2021 The Blockchain Co. Ltd") ]
           , div [ classNames [ "flex" ] ]

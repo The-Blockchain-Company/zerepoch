@@ -71,7 +71,7 @@
   \and Chad Nester\inst{2}
   \and Philip Wadler\inst{2}\orcidID{0000-0001-7619-6378}}
   \institute{The Blockchain Co., Hong Kong
-\email{\{james.chapman,roman.kireev\}@bcccoin.io}
+\email{\{james.chapman,roman.kireev\}@blockchain-company.io}
 \and
 University of Edinburgh, UK
 \email{\{cnester,wadler\}@inf.ed.ac.uk}}

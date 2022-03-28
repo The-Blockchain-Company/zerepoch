@@ -770,7 +770,7 @@
         fake-pab = ./.plan.nix/fake-pab.nix;
         base-deriving-via = ./.plan.nix/base-deriving-via.nix;
         zerepoch-contract = ./.plan.nix/zerepoch-contract.nix;
-        bcccoin-monitoring = ./.plan.nix/bcccoin-monitoring.nix;
+        tbco-monitoring = ./.plan.nix/tbco-monitoring.nix;
         io-sim = ./.plan.nix/io-sim.nix;
         bcc-crypto-test = ./.plan.nix/bcc-crypto-test.nix;
         web-ghc = ./.plan.nix/web-ghc.nix;
@@ -930,7 +930,7 @@
           "zerepoch-contract" = {
             flags = { "defer-plugin-errors" = lib.mkOverride 900 false; };
             };
-          "bcccoin-monitoring" = {
+          "tbco-monitoring" = {
             flags = {
               "performance-test-queue" = lib.mkOverride 900 false;
               "disable-observables" = lib.mkOverride 900 false;
@@ -1056,7 +1056,7 @@
           "io-streams".components.library.planned = lib.mkOverride 900 true;
           "regex-compat".components.library.planned = lib.mkOverride 900 true;
           "semigroupoids".components.library.planned = lib.mkOverride 900 true;
-          "bcccoin-monitoring".components.library.planned = lib.mkOverride 900 true;
+          "tbco-monitoring".components.library.planned = lib.mkOverride 900 true;
           "insert-ordered-containers".components.library.planned = lib.mkOverride 900 true;
           "zerepoch-pab".components.tests."zerepoch-pab-test-full-long-running".planned = lib.mkOverride 900 true;
           "Win32-network".components.exes."named-pipe-demo".planned = lib.mkOverride 900 true;

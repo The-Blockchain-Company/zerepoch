@@ -14,7 +14,7 @@
       identifier = { name = "typed-protocols"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "2021 The-Blockchain-Company ";
-      maintainer = "alex@well-typed.com, duncan@well-typed.com, marcin.szamotulski@bcccoin.io";
+      maintainer = "alex@well-typed.com, duncan@well-typed.com, marcin.szamotulski@blockchain-company.io";
       author = "Alexander Vieth, Duncan Coutts, Marcin Szamotulski";
       homepage = "";
       url = "";

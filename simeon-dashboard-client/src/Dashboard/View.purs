@@ -194,7 +194,7 @@ mobileMenu menuOpen =
         dashboardLinks
     , div
         [ classNames [ "flex", "flex-col" ] ]
-        bcccoinLinks
+        tbcoLinks
     ]
 
 dashboardBreadcrumb :: forall m. MonadAff m => (Maybe Contract.State) -> ComponentHTML Action ChildSlots m
@@ -236,7 +236,7 @@ dashboardFooter =
             dashboardLinks
         , nav
             [ classNames [ "flex", "-mr-4" ] ] -- -mr-4 to offset the padding of the last link
-            bcccoinLinks
+            tbcoLinks
         ]
     ]
 
@@ -250,10 +250,10 @@ dashboardLinks =
   , link "Support" "" -}
   ]
 
-bcccoinLinks :: forall p. Array (HTML p Action)
-bcccoinLinks =
+tbcoLinks :: forall p. Array (HTML p Action)
+tbcoLinks =
   [ link "bcc.org" "https://bcc.org"
-  , link "bcccoin.io" "https://bcccoin.io"
+  , link "blockchain-company.io" "https://blockchain-company.io"
   ]
 
 link :: forall p. String -> String -> HTML p Action

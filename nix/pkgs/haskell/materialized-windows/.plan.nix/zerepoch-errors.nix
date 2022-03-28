@@ -14,7 +14,7 @@
       identifier = { name = "zerepoch-errors"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "nikolaos.bezirgiannis@bcccoin.io";
+      maintainer = "nikolaos.bezirgiannis@blockchain-company.io";
       author = "Nikolaos Bezirgiannis";
       homepage = "";
       url = "";

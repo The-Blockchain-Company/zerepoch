@@ -4,7 +4,7 @@
 locals {
   project = "zerepoch_playground"
 
-  # By default domain names are structured by environment and type e.g. env.zerepoch.bcccoindev.io but we can override those e.g. prodzerepoch.bcccoin.io
+  # By default domain names are structured by environment and type e.g. env.zerepoch.tbcodev.io but we can override those e.g. prodzerepoch.blockchain-company.io
   simeon_domain_name      = "${var.simeon_full_domain != "" ? var.simeon_full_domain : "${var.env}.${var.simeon_tld}"}"
   zerepoch_domain_name       = "${var.zerepoch_full_domain != "" ? var.zerepoch_full_domain : "${var.env}.${var.zerepoch_tld}"}"
   simeon_dash_domain_name = "${var.env}.${var.simeon_dash_tld}"

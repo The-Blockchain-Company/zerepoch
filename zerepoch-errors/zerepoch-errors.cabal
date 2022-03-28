@@ -5,7 +5,7 @@ license: Apache-2.0
 license-files:
   LICENSE
   NOTICE
-maintainer: nikolaos.bezirgiannis@bcccoin.io
+maintainer: nikolaos.bezirgiannis@blockchain-company.io
 author: Nikolaos Bezirgiannis
 tested-with: ghc ==8.10.2
 synopsis: The error codes of the Zerepoch compiler & runtime

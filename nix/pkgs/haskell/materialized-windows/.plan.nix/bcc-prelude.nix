@@ -14,7 +14,7 @@
       identifier = { name = "bcc-prelude"; version = "0.1.0.0"; };
       license = "MIT";
       copyright = "2018-2021 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "The Blockchain Co.";
       homepage = "";
       url = "";

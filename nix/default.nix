@@ -19,14 +19,14 @@ let
       (final: prev: { stdenv = prev.stdenv // { inherit (final) lib; }; })
     ];
 
-  bcccoinNixMain = import sources.bcccoin-nix { };
+  tbcoNixMain = import sources.tbco-nix { };
 
   extraOverlays =
     # Haskell.nix (https://github.com/The-Blockchain-Company/haskell.nix)
     haskellNix.nixpkgsArgs.overlays
     # our own overlays:
     # needed for bcc-api wich uses a patched libsodium
-    ++ bcccoinNixMain.overlays.crypto
+    ++ tbcoNixMain.overlays.crypto
     ++ ownOverlays;
 
   pkgs = import sources.nixpkgs {

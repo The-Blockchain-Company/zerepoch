@@ -5,17 +5,17 @@ license: Apache-2.0
 license-files:
   LICENSE
   NOTICE
-maintainer: jann.mueller@bcccoin.io
+maintainer: jann.mueller@blockchain-company.io
 author: Jann Müller
-homepage: https://github.com/bcccoin/zerepoch#readme
-bug-reports: https://github.com/bcccoin/zerepoch/issues
+homepage: https://github.com/tbco/zerepoch#readme
+bug-reports: https://github.com/tbco/zerepoch/issues
 description:
     Please see the README on GitHub at <https://github.com/The-Blockchain-Company/zerepoch#readme>
 build-type: Simple
 
 source-repository head
     type: git
-    location: https://github.com/bcccoin/zerepoch
+    location: https://github.com/tbco/zerepoch
 
 common lang
     default-language: Haskell2010

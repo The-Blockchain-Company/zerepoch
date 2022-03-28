@@ -14,7 +14,7 @@
       identifier = { name = "bcc-crypto-wrapper"; version = "1.3.0"; };
       license = "Apache-2.0";
       copyright = "2019 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "The Blockchain Co.";
       homepage = "";
       url = "";

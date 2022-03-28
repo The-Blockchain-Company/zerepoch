@@ -7,15 +7,15 @@
       "nixpkgs=https://github.com/NixOS/nixpkgs/archive/5272327b81ed355bbed5659b8d303cf2979b6953.tar.gz"
       "nixos-config=/etc/nixos/configuration.nix"
     ];
-    binaryCaches = [ https://hydra.bcccoin.io https://cache.nixos.org ];
+    binaryCaches = [ https://hydra.blockchain-company.io https://cache.nixos.org ];
     requireSignedBinaryCaches = false;
     extraOptions = ''
       build-cores = 8
       auto-optimise-store = true
     '';
-    trustedBinaryCaches = [ https://hydra.bcccoin.io ];
+    trustedBinaryCaches = [ https://hydra.blockchain-company.io ];
     binaryCachePublicKeys = [
-      "hydra.bcccoin.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+      "hydra.blockchain-company.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
     ];
   };

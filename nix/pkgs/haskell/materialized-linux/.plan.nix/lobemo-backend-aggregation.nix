@@ -17,9 +17,9 @@
         };
       license = "Apache-2.0";
       copyright = "2019 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "Alexander Diemand";
-      homepage = "https://github.com/The-Blockchain-Company/bcccoin-monitoring-framework";
+      homepage = "https://github.com/The-Blockchain-Company/tbco-monitoring-framework";
       url = "";
       synopsis = "provides a backend implementation to aggregate traced values";
       description = "";
@@ -37,7 +37,7 @@
       "library" = {
         depends = [
           (hsPkgs."base" or (errorHandler.buildDepError "base"))
-          (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+          (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
           (hsPkgs."aeson" or (errorHandler.buildDepError "aeson"))
           (hsPkgs."async" or (errorHandler.buildDepError "async"))
           (hsPkgs."text" or (errorHandler.buildDepError "text"))

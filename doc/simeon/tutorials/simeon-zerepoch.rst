@@ -19,7 +19,7 @@ compiles Haskell code into serialized Zerepoch Core code, to create a
 Bcc *validator script* that ensures the correct execution of the
 contract. This form of implementation relies on the extensions to the
 UTxO model that are described in `this
-paper <https://bcccoin.io/research/papers/#functional-blockchain-contracts>`_.
+paper <https://blockchain-company.io/research/papers/#functional-blockchain-contracts>`_.
 
 Simeon contract execution on the blockchain consists of a chain of
 transactions where, at each stage, the remaining contract and its state

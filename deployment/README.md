@@ -18,7 +18,7 @@ The deployment uses a combination of [Terraform](https://www.terraform.io/) and 
 
 The [server configurations](https://github.com/The-Blockchain-Company/zerepoch/tree/master/deployment/morph/default.nix) that will be deployed via morph are built by hydra and are deployed by buildkite pipelines (see [pipeline.yml](https://github.com/The-Blockchain-Company/zerepoch/blob/master/.buildkite/pipeline.yml)). Two pipelines are set up for this purpose:
 
-- **master**: Successful [master branch builds](https://hydra.bcccoin.io/jobset/Bcc/zerepoch) are automatically deployed to the staging environment via the [_master_ pipeline](https://buildkite.com/The-Blockchain-Company/zerepoch/builds?branch=master)
+- **master**: Successful [master branch builds](https://hydra.blockchain-company.io/jobset/Bcc/zerepoch) are automatically deployed to the staging environment via the [_master_ pipeline](https://buildkite.com/The-Blockchain-Company/zerepoch/builds?branch=master)
 - **production**: Production deployments are triggered by the [_production_ deployment pipeline on buildkite](https://buildkite.com/The-Blockchain-Company/zerepoch/builds?branch=master) whenever the `production` branch changes.
 
 ### Environments
@@ -33,7 +33,7 @@ There are several environments to deploy to. All available environments are list
 }
 ```
 
-Environments are deployed to `<env>.bcccoindev.io`.
+Environments are deployed to `<env>.tbcodev.io`.
 
 #### Deployment Versions
 `staging` is the staging environment to which the `master` branch is deployed automatically. The `production` environment is reserved for the live environment. Additional environments are available for testing purposes.
@@ -41,10 +41,10 @@ Environments are deployed to `<env>.bcccoindev.io`.
 Ideally the `staging` deployment should always reflect the current state of `master`, and `production` should always reflect the current state of the `production` branch. This can be verified using the `/version` endpoint:
 
 ```shell
-$ curl https://staging.zerepoch.bcccoindev.io/version
+$ curl https://staging.zerepoch.tbcodev.io/version
 {"rev": "13342f6981faabdc2bb7e88a9cb5a3990f7a4930"}
 
-$ curl https://production.zerepoch.bcccoindev.io/version
+$ curl https://production.zerepoch.tbcodev.io/version
 {"rev": "acc7a4486d50844690fb485b74abab44908bd39b"}
 ```
 
@@ -181,10 +181,10 @@ In order to allow the user (ssh key) to deploy to the `testing` environment [dep
 
 ### Adding Environments
 
-Deployments can be performed to different environments. Each environment is a full aws setup with multiple ec2 instances and networking, deployed to different `bcccoindev.io` subdomains:
+Deployments can be performed to different environments. Each environment is a full aws setup with multiple ec2 instances and networking, deployed to different `tbcodev.io` subdomains:
 
-- The `alpha` environment is deployed to `alpha.bcccoindev.io`
-- `testing` is deployed to `testing.bcccoindev.io`
+- The `alpha` environment is deployed to `alpha.tbcodev.io`
+- `testing` is deployed to `testing.tbcodev.io`
 
 Terraform uses different workspaces for each environment which are also separated in the shared state which is stored in a S3 bucket. When entering a nix-shell the respective terraform workspace is chosen automatically.
 

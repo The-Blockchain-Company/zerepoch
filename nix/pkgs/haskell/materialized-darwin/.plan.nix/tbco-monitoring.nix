@@ -11,10 +11,10 @@
     flags = { disable-observables = false; performance-test-queue = false; };
     package = {
       specVersion = "1.10";
-      identifier = { name = "bcccoin-monitoring"; version = "0.2.0.0"; };
+      identifier = { name = "tbco-monitoring"; version = "0.2.0.0"; };
       license = "Apache-2.0";
       copyright = "2018 The Blockchain Co.";
-      maintainer = "operations@bcccoin.io";
+      maintainer = "operations@blockchain-company.io";
       author = "Alexander Diemand, Andreas Triantafyllos";
       homepage = "";
       url = "";
@@ -76,7 +76,7 @@
           else [ (hsPkgs."unix" or (errorHandler.buildDepError "unix")) ]);
         buildable = true;
         modules = ((([
-          "Paths_bcccoin_monitoring"
+          "Paths_tbco_monitoring"
           "Bcc/BM/Configuration"
           "Bcc/BM/Configuration/Model"
           "Bcc/BM/Configuration/Static"
@@ -127,7 +127,7 @@
           depends = [
             (hsPkgs."base" or (errorHandler.buildDepError "base"))
             (hsPkgs."contra-tracer" or (errorHandler.buildDepError "contra-tracer"))
-            (hsPkgs."bcccoin-monitoring" or (errorHandler.buildDepError "bcccoin-monitoring"))
+            (hsPkgs."tbco-monitoring" or (errorHandler.buildDepError "tbco-monitoring"))
             (hsPkgs."aeson" or (errorHandler.buildDepError "aeson"))
             (hsPkgs."array" or (errorHandler.buildDepError "array"))
             (hsPkgs."async" or (errorHandler.buildDepError "async"))
@@ -188,5 +188,5 @@
       rev = "minimal";
       sha256 = "";
       };
-    postUnpack = "sourceRoot+=/bcccoin-monitoring; echo source root reset to \$sourceRoot";
+    postUnpack = "sourceRoot+=/tbco-monitoring; echo source root reset to \$sourceRoot";
     }

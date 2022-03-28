@@ -7,13 +7,13 @@ homepage: https://github.com/zerepoch
 license: Apache-2.0
 license-file: LICENSE
 author: Zachary Churchill, Michael Peyton Jones
-maintainer: michael.peyton-jones@bcccoin.io
+maintainer: michael.peyton-jones@blockchain-company.io
 
 category: Data
 
 source-repository head
     type: git
-    location: https://github.com/bcccoin/zerepoch
+    location: https://github.com/tbco/zerepoch
 
 library
   exposed-modules:

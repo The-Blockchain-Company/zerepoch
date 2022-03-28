@@ -14,7 +14,7 @@
       identifier = { name = "zerepoch-doc"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "jann.mueller@bcccoin.io";
+      maintainer = "jann.mueller@blockchain-company.io";
       author = "Michael Peyton Jones, Jann Mueller";
       homepage = "";
       url = "";

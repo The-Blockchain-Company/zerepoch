@@ -79,7 +79,7 @@ documentationLinksPane =
     [ text "Getting Started" /\ "https://developers.bcc.org/en/programming-languages/zerepoch/getting-started/"
     , text "Tutorials" /\ "./doc/zerepoch/tutorials/index.html"
     , text "API" /\ "./doc/haddock/index.html"
-    , text "Privacy" /\ "https://static.bcccoin.io/docs/data-protection/bcccoin-data-protection-gdpr-policy.pdf"
+    , text "Privacy" /\ "https://static.blockchain-company.io/docs/data-protection/tbco-data-protection-gdpr-policy.pdf"
     ]
 
 subHeader :: forall m. MonadAff m => State -> ComponentHTML HAction ChildSlots m
@@ -260,7 +260,7 @@ mainFooter =
     [ div
         [ classes [ navbarNav, mrAuto ] ]
         [ makeNavItem $ text "bcc.org" /\ "https://bcc.org/"
-        , makeNavItem $ text "bcccoin.io" /\ "https://bcccoin.io/"
+        , makeNavItem $ text "blockchain-company.io" /\ "https://blockchain-company.io/"
         ]
     , div
         [ classes [ navbarNav ] ]

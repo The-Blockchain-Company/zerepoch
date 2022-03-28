@@ -24,7 +24,7 @@ exports.blocklyIconColour = require("static/images/blockly-icon.svg");
 
 exports.readMoreIconWhite = require("static/images/read-more-icon-white.svg");
 
-exports.bcccoinIcon = require("static/images/bcccoin.svg");
+exports.tbcoIcon = require("static/images/tbco.svg");
 
 exports.simulationIcon = require("static/images/simulation-icon.svg");
 
@@ -38,7 +38,7 @@ exports.greyCircle = require("static/images/grey-circle.svg");
 
 exports.selectButton = require("static/images/select-button.svg");
 
-exports.bcccoinLogo = require("static/images/The Blockchain Co.-logo.svg");
+exports.tbcoLogo = require("static/images/The Blockchain Co.-logo.svg");
 
 exports.haskellIcon = require("static/images/haskell-icon.svg");
 

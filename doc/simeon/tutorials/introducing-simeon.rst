@@ -155,29 +155,29 @@ If you are interested in working with us, please get in touch.
 Our research work is reported in these published papers.
 
 -  `Simeon: financial contracts on
-   blockchain <https://bcccoin.io/en/research/library/papers/simeonfinancial-contracts-on-blockchain/>`_
+   blockchain <https://blockchain-company.io/en/research/library/papers/simeonfinancial-contracts-on-blockchain/>`_
    The paper that introduced the Simeon language. It is an earlier version, but 
    nevertheless it explains the principles and rationale behind its
    design and implementation.
 
 -  `Simeon: implementing and analysing financial contracts on
-   blockchain <https://bcccoin.io/en/research/library/papers/simeonimplementing-and-analysing-financial-contracts-on-blockchain/>`_
+   blockchain <https://blockchain-company.io/en/research/library/papers/simeonimplementing-and-analysing-financial-contracts-on-blockchain/>`_
    This paper describes the implementation of Simeon on the Bcc
    blockchain, and the analysis supported by the Simeon Playground
    web-based development and simulation environment.
 
 -  `Efficient static analysis of Simeon
-   contracts <https://bcccoin.io/en/research/library/papers/efficient-static-analysis-of-simeon-contracts/>`_
+   contracts <https://blockchain-company.io/en/research/library/papers/efficient-static-analysis-of-simeon-contracts/>`_
    This paper explains how we optimised the static analysis explained in
    the previous paper.
 
--  `Standardized crypto-loans on the Bcc blockchain <https://bcccoin.io/en/research/library/papers/standardized-crypto-loans-on-the-bcc-blockchain/>`_
+-  `Standardized crypto-loans on the Bcc blockchain <https://blockchain-company.io/en/research/library/papers/standardized-crypto-loans-on-the-bcc-blockchain/>`_
    In this paper we explore a smart contract framework for building standardized crypto-loans using Simeon, with the ACTUS standard at its core.
 
 and in this eprints survey paper.
 
 - `Scripting smart contracts for distributed ledger 
-  technology <https://bcccoin.io/en/research/library/papers/scripting-smart-contracts-for-distributed-ledger-technology/>`_
+  technology <https://blockchain-company.io/en/research/library/papers/scripting-smart-contracts-for-distributed-ledger-technology/>`_
   Here we give an overview of the scripting languages used in existing cryptocurrencies.
 
 Finding out more
@@ -195,7 +195,7 @@ Systems
    repository <https://github.com/The-Blockchain-Company/simeon>`_ from which
    you can download Simeon.
 
--  `The Simeon Website <https://staging.simeon-web.bcccoindev.io>`_ landing page for all things Simeon.
+-  `The Simeon Website <https://staging.simeon-web.tbcodev.io>`_ landing page for all things Simeon.
 
 
 Videos

@@ -16,7 +16,7 @@
       copyright = "";
       maintainer = "ulf.norell@quviq.com";
       author = "Ulf Norell";
-      homepage = "https://github.com/bcccoin/zerepoch#readme";
+      homepage = "https://github.com/tbco/zerepoch#readme";
       url = "";
       synopsis = "";
       description = "Please see the README on GitHub at <https://github.com/The-Blockchain-Company/zerepoch#readme>";

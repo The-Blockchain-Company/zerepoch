@@ -6,10 +6,10 @@ license-files:
     LICENSE
     NOTICE
 
-maintainer:    jann.mueller@bcccoin.io
+maintainer:    jann.mueller@blockchain-company.io
 author:        Jann Müller
-homepage:      https://github.com/bcccoin/zerepoch#readme
-bug-reports:   https://github.com/bcccoin/zerepoch/issues
+homepage:      https://github.com/tbco/zerepoch#readme
+bug-reports:   https://github.com/tbco/zerepoch/issues
 description:
     Please see the README on GitHub at <https://github.com/The-Blockchain-Company/zerepoch#readme>
 
@@ -17,7 +17,7 @@ build-type:    Simple
 
 source-repository head
     type:     git
-    location: https://github.com/bcccoin/zerepoch
+    location: https://github.com/tbco/zerepoch
 
 flag defer-plugin-errors
     description:
@@ -202,7 +202,7 @@ library
         mwc-random -any,
         primitive -any,
         hedgehog -any,
-        bcccoin-monitoring -any,
+        tbco-monitoring -any,
         lobemo-backend-ekg -any,
         exceptions -any,
         data-default -any,
@@ -236,7 +236,7 @@ executable zerepoch-pab-setup
         filepath -any,
         freer-extras -any,
         freer-simple -any,
-        bcccoin-monitoring -any,
+        tbco-monitoring -any,
         lens -any,
         lobemo-backend-ekg -any,
         monad-logger -any,
@@ -460,7 +460,7 @@ test-suite zerepoch-pab-test-full
         zerepoch-tx -any,
         playground-common -any,
         yaml -any,
-        bcccoin-monitoring -any,
+        tbco-monitoring -any,
         servant-server -any,
         purescript-bridge -any,
         async -any,
@@ -517,7 +517,7 @@ test-suite zerepoch-pab-test-full-long-running
         zerepoch-tx -any,
         playground-common -any,
         yaml -any,
-        bcccoin-monitoring -any,
+        tbco-monitoring -any,
         servant-server -any,
         purescript-bridge -any,
         async -any,
