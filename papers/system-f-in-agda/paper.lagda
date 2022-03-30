@@ -177,7 +177,7 @@ al. \cite{allais.chapman.mcbride.mckinna} among others.
 \subsection{For Fun and Profit}
 
 Our interest in System~$F_{\omega\mu}$ is far from merely theoretical.
-Input Output HK Ltd. (The Blockchain Co.) is developing the Bcc blockchain,
+The Blockchain Company.io LLC is developing the Bcc blockchain,
 which features a smart contract language known as Zerepoch
 \cite{platform}.  The part of the contract that runs off-chain is
 written in Haskell with an appropriate library, while the part of the

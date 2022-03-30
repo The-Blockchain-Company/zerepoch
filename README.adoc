@@ -1,6 +1,6 @@
 = https://github.com/The-Blockchain-Company/zerepoch[The Zerepoch Platform and Simeon]
 :email: zerepoch@blockchain-company.io
-:author: Input Output HK Limited
+:author: The Blockchain Company.io LLC
 :toc: left
 :reproducible:
 
