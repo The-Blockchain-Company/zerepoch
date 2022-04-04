@@ -4,7 +4,7 @@
 }:
 let
   imageRef = dockerImage.imageName + ":" + dockerImage.imageTag;
-  dockerHubRepoName = "inputoutput/zerepoch-starter-devcontainer";
+  dockerHubRepoName = "tbco/zerepoch-starter-devcontainer";
 in
 pkgs.writeScript "docker-build-push-devcontainer" ''
   #!${pkgs.runtimeShell}
