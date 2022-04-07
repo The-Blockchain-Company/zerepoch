@@ -167,7 +167,7 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/The-Blockchain-Company/bcc-ledger-specs
-  tag: 1abee64f9bba84e4660ed2f927464d022e1846bb
+  tag: 502a2ebd395db6d4927fcc7eae6ece8749911fec
   subdir:
     cole/chain/executable-spec
     cole/crypto
