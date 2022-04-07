@@ -39,7 +39,7 @@ library
         Test.QuickCheck.StateModel
     build-depends:
         QuickCheck -any,
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         containers -any,
         random -any,
 
@@ -58,7 +58,7 @@ test-suite quickcheck-dynamic-test
                  -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas
     build-depends:
         QuickCheck -any,
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         containers -any,
         random -any,
         quickcheck-dynamic -any,

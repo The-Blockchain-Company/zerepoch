@@ -141,10 +141,9 @@ library
         ZerepochIR.Transform.ThunkRecursions
         ZerepochIR.Transform.Unwrap
         ZerepochIR.TypeCheck
-
+        
         UntypedZerepochCore
         UntypedZerepochCore.DeBruijn
-        UntypedZerepochCore.Evaluation.HOAS
         UntypedZerepochCore.Evaluation.Machine.Cek
         UntypedZerepochCore.Evaluation.Machine.Cek.Internal
         UntypedZerepochCore.Parser

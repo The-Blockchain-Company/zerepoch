@@ -64,7 +64,7 @@ library
         strict-containers -any,
     build-depends:
         aeson -any,
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         bcc-api -any,
         bcc-ledger-cole -any,
         containers -any,
