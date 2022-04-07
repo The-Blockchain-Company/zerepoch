@@ -315,7 +315,7 @@ library
         unordered-containers -any,
         witherable -any,
         word-array -any,
-        bcc-crypto-class -any
+        bcc-crypto-class -any,
         zerepoch-contract -any
 
 test-suite satint-test
