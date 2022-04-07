@@ -316,6 +316,7 @@ library
         witherable -any,
         word-array -any,
         bcc-crypto-class -any
+        zerepoch-contract -any
 
 test-suite satint-test
   import: lang

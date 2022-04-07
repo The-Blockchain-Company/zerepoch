@@ -84,9 +84,9 @@ extra-deps:
 - git: https://github.com/shmish111/servant-purescript.git
   commit: a76104490499aa72d40c2790d10e9383e0dbde63
 - git: https://github.com/The-Blockchain-Company/bcc-crypto.git
-  commit: 07397f0e50da97eaa0575d93bee7ac4b2b2576ec
+  commit: ce2f7994556490b169914f8d818fb9ef6149211f
 - git: https://github.com/The-Blockchain-Company/shardagnostic-network
-  commit: 6d00ff77f9bcd769fb6d7fd02216cec4e837bfcf
+  commit: 556083a6d5e0fb94c912b561a5f1f7afd1113dc0
   subdirs:
     - monoidal-synchronisation
     - typed-protocols
@@ -102,12 +102,12 @@ extra-deps:
     - io-classes
     - network-mux
 - git: https://github.com/The-Blockchain-Company/bcc-prelude
-  commit: fd773f7a58412131512b9f694ab95653ac430852
+  commit: 0d8950bb8d25e1a8de1120c1f73f7673599f2c82
   subdirs:
     - bcc-prelude
     - bcc-prelude-test
 - git: https://github.com/The-Blockchain-Company/bcc-base
-  commit: 46502694f6a9f0498f822068008b232b3837a9e9
+  commit: 6038ac6360f687ef4e9c6802225f37b05f4971b6
   subdirs:
     - base-deriving-via
     - binary
@@ -120,7 +120,7 @@ extra-deps:
     - bcc-crypto-tests
     - strict-containers
 - git: https://github.com/The-Blockchain-Company/bcc-ledger-specs
-  commit: d5b184a820853c7ba202efd615b8fadca1acb52c
+  commit: 70423e2e9fcbef62bca659c4e72080a9af9625a5
   subdirs:
     - cole/chain/executable-spec
     - cole/crypto
@@ -137,7 +137,7 @@ extra-deps:
     - bcc-ledger-core
     - aurum/impl
 - git: https://github.com/The-Blockchain-Company/tbco-monitoring-framework
-  commit: 46f994e216a1f8b36fe4669b47b2a7011b0e153c
+  commit: 5d400bd081ceb8058cc7cb874af625c6bb843ad5
   subdirs:
     - tbco-monitoring
     - tracer-transformers
@@ -148,7 +148,7 @@ extra-deps:
     - plugins/backend-trace-forwarder
     - plugins/scribe-systemd
 - git: https://github.com/The-Blockchain-Company/bcc-node.git
-  commit: 8cf2b208c7708bd890c7e74d5b1d7c4167a3b40b
+  commit: 3ef1e60d07713f7e447667a47e7e9b190a49134e
   subdirs:
     - bcc-api
     - bcc-node
@@ -159,9 +159,9 @@ extra-deps:
 - git: https://github.com/The-Blockchain-Company/Win32-network
   commit: 3825d3abf75f83f406c1f7161883c438dac7277d
 - git: https://github.com/The-Blockchain-Company/hedgehog-extras
-  commit: edf6945007177a638fbeb8802397f3a6f4e47c14
+  commit: 1485421ec9ee98db2c575c14e46e30017850edd1
 - git: https://github.com/The-Blockchain-Company/shepards
-  commit: cde90a2b27f79187ca8310b6549331e59595e7ba
+  commit: 768e0f4462c3a92959c1b8508e45f6b081184122
 
 allow-newer: true
 
