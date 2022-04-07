@@ -5,7 +5,7 @@ license: Apache-2.0
 license-files:
   LICENSE
   NOTICE
-maintainer: michael.peyton-jones@blockchain-company.io
+maintainer: rmourey_jr@blockchain-company.io
 author: Zerepoch Core Team
 tested-with: ghc ==8.2.2 ghc ==8.4.3 ghc ==8.6.1
 synopsis: Language library for Zerepoch Core

@@ -58,7 +58,7 @@ library
                  -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas
     build-depends:
         aeson -any,
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         bytestring -any,
         containers -any,
         cookie -any,
@@ -126,7 +126,7 @@ library zerepoch-playground-usecases
 
     build-depends:
         aeson -any,
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         data-default -any,
         lens -any,
         bytestring -any,
@@ -178,7 +178,7 @@ executable zerepoch-playground-server
         adjunctions -any,
         aeson -any,
         aeson-pretty -any,
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         bytestring -any,
         containers -any,
         data-default -any,
@@ -230,7 +230,7 @@ test-suite zerepoch-playground-server-test
                  -fprint-potential-instances
     build-depends:
         aeson -any,
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         bytestring -any,
         tasty -any,
         tasty-hunit -any,

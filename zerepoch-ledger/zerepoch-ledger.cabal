@@ -5,7 +5,7 @@ license: Apache-2.0
 license-files:
   LICENSE
   NOTICE
-maintainer: michael.peyton-jones@blockchain-company.io
+maintainer: rmourey_jr@blockchain-company.io
 author: Michael Peyton Jones, Jann Mueller
 synopsis: Wallet API
 description:
