@@ -14,7 +14,7 @@
       identifier = { name = "zerepoch-core"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "michael.peyton-jones@blockchain-company.io";
+      maintainer = "rmourey_jr@blockchain-company.io";
       author = "Zerepoch Core Team";
       homepage = "";
       url = "";
@@ -288,7 +288,6 @@
           "ZerepochIR/TypeCheck"
           "UntypedZerepochCore"
           "UntypedZerepochCore/DeBruijn"
-          "UntypedZerepochCore/Evaluation/HOAS"
           "UntypedZerepochCore/Evaluation/Machine/Cek"
           "UntypedZerepochCore/Evaluation/Machine/Cek/Internal"
           "UntypedZerepochCore/Parser"

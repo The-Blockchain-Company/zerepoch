@@ -14,7 +14,7 @@
       identifier = { name = "zerepoch-tx-plugin"; version = "0.1.0.0"; };
       license = "Apache-2.0";
       copyright = "";
-      maintainer = "michael.peyton-jones@blockchain-company.io";
+      maintainer = "rmourey_jr@blockchain-company.io";
       author = "Michael Peyton Jones";
       homepage = "";
       url = "";

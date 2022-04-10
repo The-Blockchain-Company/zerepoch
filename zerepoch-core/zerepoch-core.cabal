@@ -1,12 +1,12 @@
-cabal-version: 2.4
+cabal-version: 3.0
 name: zerepoch-core
 version: 0.1.0.0
 license: Apache-2.0
 license-files:
   LICENSE
   NOTICE
-maintainer: michael.peyton-jones@blockchain-company.io
-author: Zerepoch Core Team
+maintainer: rmourey_jr@blockchain-company.io
+author: The Blockchain Company.io modified the original created by IOHK
 tested-with: ghc ==8.2.2 ghc ==8.4.3 ghc ==8.6.1
 synopsis: Language library for Zerepoch Core
 description:
@@ -141,10 +141,9 @@ library
         ZerepochIR.Transform.ThunkRecursions
         ZerepochIR.Transform.Unwrap
         ZerepochIR.TypeCheck
-
+        
         UntypedZerepochCore
         UntypedZerepochCore.DeBruijn
-        UntypedZerepochCore.Evaluation.HOAS
         UntypedZerepochCore.Evaluation.Machine.Cek
         UntypedZerepochCore.Evaluation.Machine.Cek.Internal
         UntypedZerepochCore.Parser
@@ -569,6 +568,9 @@ library index-envs
     build-depends:
         base -any,
         containers -any,
+        extra -any,
+        vector -any,
+        nonempty-vector -any,
         -- broken for ral-0.2 conflic with  bcc-binary:recursion-schemes
         ral == 0.1
 
@@ -583,6 +585,7 @@ benchmark index-envs-bench
         index-envs -any,
         criterion >= 1.5.9.0,
         random >= 1.2.0,
+        nonempty-vector -any,
         -- broken for ral-0.2 conflic with  bcc-binary:recursion-schemes
         ral == 0.1
 
@@ -595,6 +598,7 @@ test-suite index-envs-test
     build-depends:
         base -any,
         index-envs -any,
+        nonempty-vector -any,
         tasty -any,
         tasty-hunit -any,
         tasty-quickcheck -any
