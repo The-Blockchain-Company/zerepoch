@@ -35,7 +35,7 @@ library
                  -Wincomplete-uni-patterns -Wincomplete-record-updates
                  -Wno-missing-import-lists -Wredundant-constraints
     build-depends:
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         aeson -any,
         servant,
         servant-server,
@@ -61,7 +61,7 @@ executable web-ghc-server
                  -Wno-missing-import-lists -Wredundant-constraints -O0
                  -Wunused-packages
     build-depends:
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         data-default-class,
         exceptions,
         http-types,
@@ -92,6 +92,6 @@ test-suite web-ghc-test
                  -Wno-missing-import-lists -Wredundant-constraints
                  -fprint-potential-instances -Wunused-packages
     build-depends:
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         tasty,
         web-ghc

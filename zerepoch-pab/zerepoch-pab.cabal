@@ -135,7 +135,7 @@ library
         aeson -any,
         aeson-pretty -any,
         async -any,
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         bytestring -any,
         bcc-api -any,
         bcc-crypto -any,

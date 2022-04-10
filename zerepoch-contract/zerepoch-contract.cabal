@@ -108,7 +108,7 @@ library
     build-depends:
         aeson >= 1.5.2,
         aeson-pretty -any,
-        base >=4.7 && <5,
+        base >=4.9 && <5,
         bytestring -any,
         containers -any,
         cryptonite >=0.25,
