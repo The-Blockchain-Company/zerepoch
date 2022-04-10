@@ -41,7 +41,7 @@ library
       Errors.TH.GenDocs
   hs-source-dirs: src
   build-depends:
-      base >=4.9 && <5,
+      base >=4.7 && <5,
       template-haskell >= 2.16,
       th-abstraction < 0.4,
       containers >= 0.6,
@@ -55,7 +55,7 @@ executable zerepoch-errors-next
   main-is: Main.hs
   hs-source-dirs: exe-next
   build-depends:
-      base >=4.9 && <5,
+      base >=4.7 && <5,
       zerepoch-core,
       zerepoch-errors,
       prettyprinter >=1.1.0.1
@@ -67,7 +67,7 @@ executable zerepoch-errors-bootstrap
       Errors.TH.Bootstrap
   hs-source-dirs: exe-bootstrap
   build-depends:
-      base >=4.9 && <5,
+      base >=4.7 && <5,
       template-haskell >= 2.16,
       th-abstraction < 0.4,
       containers >= 0.6,

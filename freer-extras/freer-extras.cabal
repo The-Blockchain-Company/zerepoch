@@ -36,7 +36,7 @@ library
         Control.Monad.Freer.Extras.State
   build-depends:
         aeson -any,
-        base >=4.9 && <5,
+        base >=4.7 && <5,
         lens -any,
         freer-simple -any,
         mtl -any,

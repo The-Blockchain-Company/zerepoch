@@ -29,7 +29,7 @@ library
   build-depends:
       BNFC-meta
     , QuickCheck
-    , base >=4.9 && <5
+    , base >=4.7 && <5
     , containers
     , criterion
     , mtl
@@ -53,7 +53,7 @@ executable fomega-exe
   build-depends:
       BNFC-meta
     , QuickCheck
-    , base >=4.9 && <5
+    , base >=4.7 && <5
     , containers
     , criterion
     , fomega
@@ -72,7 +72,7 @@ test-suite fomega-test
   build-depends:
       BNFC-meta
     , QuickCheck
-    , base >=4.9 && <5
+    , base >=4.7 && <5
     , containers
     , criterion
     , fomega
@@ -93,7 +93,7 @@ benchmark fomega-z-combinator-benchmarks
   build-depends:
       BNFC-meta
     , QuickCheck
-    , base >=4.9 && <5
+    , base >=4.7 && <5
     , containers
     , criterion
     , mtl

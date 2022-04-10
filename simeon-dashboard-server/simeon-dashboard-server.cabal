@@ -25,7 +25,7 @@ library
     default-language: Haskell2010
     build-depends:
         aeson -any,
-        base >=4.9 && <5,
+        base >=4.7 && <5,
         http-client -any,
         http-client-tls -any,
         monad-logger -any,

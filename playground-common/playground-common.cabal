@@ -40,7 +40,7 @@ library
     build-depends:
         aeson -any,
         aeson-casing -any,
-        base >=4.9 && <5,
+        base >=4.7 && <5,
         bytestring -any,
         bytestring -any,
         cookie -any,
@@ -106,7 +106,7 @@ test-suite playground-common-test
                  -fprint-potential-instances
     build-depends:
         aeson -any,
-        base >=4.9 && <5,
+        base >=4.7 && <5,
         bytestring -any,
         containers -any,
         cryptonite -any,
