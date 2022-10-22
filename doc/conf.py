@@ -32,8 +32,8 @@ if rtd_version not in ["stable", "latest"]:
 # -- Project information -----------------------------------------------------
 
 project = 'The Zerepoch Platform and Simeon'
-copyright = '2021, The Blockchain Co.'
-author = 'The Blockchain Co.'
+copyright = '2021, The Blockchain Company.io LLC.'
+author = 'The Blockchain Company.io LLC.'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
@@ -107,7 +107,7 @@ html_theme_options = {
     'display_version': False,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
-    'style_nav_header_background': '#fcfcfc',
+    'style_nav_header_background': '#1e2022',
     # Toc options
     'collapse_navigation': False,
     'sticky_navigation': True,
